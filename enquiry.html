@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kulani's Dentistry - Book Appointment</title>
+</head>
+<body>
+    <table border="1" width="100%" cellspacing="0" cellpadding="20">
+        <tr>
+            <td align="center">
+                <img src="picture8.png" alt="Tooth logo" width="70">
+                <h1>Kulani's Dentistry</h1>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <a href="index.html">Home</a> |
+                <a href="about.html">About</a> |
+                <a href="services.html">Services</a> |
+                <a href="enquiry.html">Booking</a> |
+                <a href="faq.html">FAQ</a> |
+                <a href="contact.html">Contact</a>
+            </td>
+        </tr>
+        <tr>
+            <td align="center"><h1>Book an Appointment</h1></td>
+        </tr>
+        <tr>
+            <td>
+                <form action="enquiry.html" method="get">
+                    <label for="service">Choose Treatment:</label>
+                    <select id="service" name="service">
+                        <option value=""></option>
+                        <option value="check-up">Dental Check-up</option>
+                        <option value="teeth-cleaning">Teeth Cleaning</option>
+                        <option value="preventive-care">Preventive Care</option>
+                        <option value="dental-fillings">Dental Fillings</option>
+                        <option value="tooth-extractions">Tooth Extractions</option>
+                        <option value="emergency-care">Emergency Dental Care</option>
+                    </select>
+                    <br><br>
+
+                    <label for="dentist">Choose Dentist:</label>
+                    <select id="dentist" name="dentist">
+                        <option value=""></option>
+                        <option value="dentist-1">Dentist 1</option>
+                        <option value="dentist-2">Dentist 2</option>
+                        <option value="dentist-3">Dentist 3</option>
+                        <option value="any">Any Available Dentist</option>
+                    </select>
+                    <br><br>
+
+                    <label for="date">Choose Date:</label>
+                    <input type="date" id="date" name="date">
+                    <br><br>
+
+                    <label for="time">Choose an Available Time:</label>
+                    <select id="time" name="time">
+                        <option value=""></option>
+                        <option value="08:00">08:00</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                    </select>
+                    <br><br>
+
+                    <h2>Your Details</h2>
+
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" size="50">
+                    <br><br>
+
+                    <label for="telephone">Telephone Number:</label>
+                    <input type="tel" id="telephone" name="telephone" size="50">
+                    <br><br>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" size="50">
+                    <br><br>
+
+                    <label for="new-patient">New Patient?</label>
+                    <select id="new-patient" name="new-patient">
+                        <option value=""></option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <br><br>
+
+                    <label for="information">Additional Information:</label>
+                    <br>
+                    <textarea id="information" name="information" rows="6" cols="50"></textarea>
+
+                    <br><br>
+                    <input type="submit" value="SUBMIT BOOKING">
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

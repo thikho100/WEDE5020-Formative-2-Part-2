@@ -1,0 +1,446 @@
+/* Kulani's Dentistry - Part 2 CSS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Aptos, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: darkslategray;
+    background-color: white;
+    animation: pageEnter 0.7s ease;
+}
+
+h1,
+h2 {
+    margin-top: 0;
+    color: darkslategray;
+}
+
+h1 {
+    font-size: 2.3rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+p {
+    margin: 0.7rem 0;
+}
+
+a {
+    color: steelblue;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+a:hover,
+a:focus {
+    color: midnightblue;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove the old HTML table borders and use CSS spacing instead. */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0;
+    background-color: white;
+}
+
+td,
+th {
+    border: 0;
+    padding: 20px;
+    vertical-align: top;
+}
+
+/* Header / logo */
+body > table:first-of-type {
+    border-bottom: 1px solid lightgray;
+    box-shadow: 0 2px 8px gainsboro;
+}
+
+body > table:first-of-type tr:first-child {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Flexbox keeps the header sections evenly spaced on larger screens. */
+body > table:first-of-type tr:first-child > td {
+    flex: 1 1 220px;
+}
+
+body > table:first-of-type tr:nth-child(2) td {
+    background-color: aliceblue;
+}
+
+body > table:first-of-type tr:nth-child(2) a {
+    display: inline-block;
+    margin: 0 0.6rem;
+    padding: 0.4rem 0;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+}
+
+body > table:first-of-type tr:nth-child(2) a:hover,
+body > table:first-of-type tr:nth-child(2) a:focus {
+    border-bottom-color: steelblue;
+}
+
+img[src="picture8.png"] {
+    transition: transform 0.4s ease;
+}
+
+img[src="picture8.png"]:hover {
+    transform: rotate(-12deg) scale(1.05);
+}
+
+/* Home page banner. The clinic image is also used as a CSS background image. */
+a[href="index.html"] ~ a[href="about.html"] {
+    white-space: nowrap;
+}
+
+body > table:nth-of-type(2) tr:nth-child(2) td:has(img[src="picture3.jpg"]) {
+    min-height: 420px;
+    color: white;
+    text-shadow: 0 1px 2px black;
+    background-color: darkslategray;
+    background-image: linear-gradient(rgba(25, 50, 60, 0.75), rgba(25, 50, 60, 0.55)), url("picture3.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+body > table:nth-of-type(2) tr:nth-child(2) td:has(img[src="picture3.jpg"]) h1,
+body > table:nth-of-type(2) tr:nth-child(2) td:has(img[src="picture3.jpg"]) p {
+    color: white;
+}
+
+body > table:nth-of-type(2) tr:nth-child(2) td:has(img[src="picture3.jpg"]) img {
+    display: none;
+}
+
+/* Service card layout */
+img[src="picture1.jpg"],
+img[src="picture2.jpg"],
+img[src="picture4.jpg"],
+img[src="picture5.jpg"],
+img[src="picture6.jpg"],
+img[src="picture7.jpg"] {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px lightgray;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img[src="picture1.jpg"]:hover,
+img[src="picture2.jpg"]:hover,
+img[src="picture4.jpg"]:hover,
+img[src="picture5.jpg"]:hover,
+img[src="picture6.jpg"]:hover,
+img[src="picture7.jpg"]:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 18px silver;
+}
+
+/* Give service tables a simple grid-like card appearance. */
+table:has(img[src="picture1.jpg"]):has(img[src="picture2.jpg"]) tr {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+table:has(img[src="picture1.jpg"]):has(img[src="picture2.jpg"]) td {
+    background-color: white;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px gainsboro;
+}
+
+/* About page */
+td:has(h2:first-child) {
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+td:has(h2:first-child):hover {
+    background-color: aliceblue;
+}
+
+body > table:first-of-type p:first-of-type::first-letter {
+    font-size: 1.15em;
+}
+
+/* Buttons and button-like links */
+input[type="submit"],
+button,
+a[href="enquiry.html"] h2,
+a[href="enquiry.html"]:not([href="index.html"]),
+a[href="about.html"]:only-child,
+a[href="contact.html"]:only-child {
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+button,
+input[type="submit"] {
+    border: 0;
+    border-radius: 4px;
+    padding: 0.75rem 1.1rem;
+    background-color: steelblue;
+    color: white;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background-color: midnightblue;
+    box-shadow: 0 4px 10px lightgray;
+    transform: translateY(-2px);
+}
+
+button:active,
+input[type="submit"]:active {
+    transform: scale(0.97);
+}
+
+/* Add a rotating arrow to booking links. */
+a[href="enquiry.html"]::after {
+    content: "  →";
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+a[href="enquiry.html"]:hover::after,
+a[href="enquiry.html"]:focus::after {
+    transform: rotate(45deg);
+}
+
+/* Magnify the small Staff Login link. */
+small a[href="staff-login.html"] {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+small a[href="staff-login.html"]:hover,
+small a[href="staff-login.html"]:focus {
+    transform: scale(1.2);
+}
+
+/* Forms */
+form {
+    max-width: 760px;
+    margin: 20px auto;
+    padding: 24px;
+    background-color: whitesmoke;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px gainsboro;
+}
+
+label {
+    display: inline-block;
+    min-width: 150px;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    max-width: 100%;
+    padding: 0.7rem;
+    border: 1px solid silver;
+    border-radius: 4px;
+    font: inherit;
+    background-color: white;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: steelblue;
+    outline: none;
+    box-shadow: 0 0 0 3px lightblue;
+    transform: scale(1.01);
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+/* Contact details use a two-column grid on larger screens. */
+body > table:nth-of-type(2) tr:has(td:nth-child(2)) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding: 18px;
+}
+
+body > table:nth-of-type(2) tr:has(td:nth-child(2)) td {
+    background-color: aliceblue;
+    border-top: 3px solid lightsteelblue;
+    border-radius: 4px;
+}
+
+/* FAQ headings */
+h2::after {
+    transition: transform 0.3s ease;
+}
+
+body > table:first-of-type tr:nth-child(n+4) h2::after {
+    content: " +";
+    display: inline-block;
+    color: steelblue;
+}
+
+body > table:first-of-type tr:nth-child(n+4):hover h2::after {
+    transform: rotate(45deg);
+}
+
+/* Admin page table */
+body > table:nth-of-type(2):has(th) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+body > table:nth-of-type(2):has(th) th {
+    background-color: steelblue;
+    color: white;
+}
+
+body > table:nth-of-type(2):has(th) tr:nth-child(even) td {
+    background-color: whitesmoke;
+}
+
+/* Simple entrance animation */
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    table:has(img[src="picture1.jpg"]):has(img[src="picture2.jpg"]) tr {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    body > table:nth-of-type(2) tr:has(td:nth-child(2)) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    td,
+    th {
+        padding: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    table,
+    tbody,
+    tr,
+    td {
+        width: 100%;
+    }
+
+    body > table:first-of-type tr:first-child {
+        display: block;
+    }
+
+    body > table:first-of-type tr:first-child td {
+        display: block;
+        text-align: center;
+    }
+
+    body > table:first-of-type tr:nth-child(2) td {
+        line-height: 2.2;
+    }
+
+    body > table:first-of-type tr:nth-child(2) a {
+        margin: 0 0.3rem;
+    }
+
+    table:has(img[src="picture1.jpg"]):has(img[src="picture2.jpg"]) tr,
+    body > table:nth-of-type(2) tr:has(td:nth-child(2)) {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        margin: 10px;
+        padding: 18px;
+    }
+
+    label {
+        display: block;
+        min-width: 0;
+    }
+
+    input:not([type="submit"]),
+    select,
+    textarea {
+        width: 100%;
+    }
+
+    td,
+    th {
+        padding: 14px;
+    }
+}
+
+/* Accessibility: reduce motion if requested by the device. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
