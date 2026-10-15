@@ -186,6 +186,13 @@ Deployment has not been performed from this folder. Live account access, the tar
 - Added CODE-GUIDE.md to explain the code.
 - Removed the pending lecturer-feedback section because no feedback was provided.
 
+### 15 October 2026 – Part 2 feedback updates
+
+- Added one shared, wrapping navigation style across the home page and inner pages.
+- Improved the CSS base reset and small-screen text wrapping.
+- Added tablet and phone rules so content images stay within their cells and keep their proportions; service and gallery images use consistent crops.
+- Improved visible focus and current-page styling for navigation links.
+
 ## Testing
 
 See `TEST-RESULTS.md` for the checks actually performed and any limits. Live deployment, mailbox delivery and off-page SEO remain separate checks.
