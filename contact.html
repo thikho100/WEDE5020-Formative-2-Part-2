@@ -1,83 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Kulani's Dentistry - Contact</title>
-</head>
-<body>
-    <table border="1" width="100%" cellspacing="0" cellpadding="20">
-        <tr>
-            <td align="center">
-                <img src="picture8.png" alt="Tooth logo" width="70">
-                <h1>Kulani's Dentistry</h1>
-            </td>
-        </tr>
-        <tr>
-            <td align="center">
-                <a href="index.html">Home</a> |
-                <a href="about.html">About</a> |
-                <a href="services.html">Services</a> |
-                <a href="enquiry.html">Booking</a> |
-                <a href="faq.html">FAQ</a> |
-                <a href="contact.html">Contact</a>
-            </td>
-        </tr>
-        <tr>
-            <td align="center"><h1>Contact Details</h1></td>
-        </tr>
-    </table>
-
-    <table border="1" width="100%" cellspacing="0" cellpadding="20">
-        <tr>
-            <td>
-                <h2>Telephone Number</h2>
-                <p>081 86042 35</p>
-            </td>
-            <td>
-                <h2>Email Address</h2>
-                <p>info@kulanisdentistry.co.za</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h2>Operating Hours</h2>
-                <p>Monday to Friday: 08:00 - 17:00</p>
-                <p>Saturday: 08:00 - 13:00</p>
-                <p>Sunday and public holidays: Closed</p>
-            </td>
-            <td>
-                <h2>Clinic Location</h2>
-                <p>125 Pretorius Street</p>
-                <p>Pretoria Central, Pretoria, 0002</p>
-                <p><a href="https://www.google.com/maps/search/?api=1&amp;query=125+Pretorius+Street+Pretoria" target="_blank">VIEW MAP AND DIRECTIONS</a></p>
-            </td>
-        </tr>
-    </table>
-
-    <table border="1" width="100%" cellspacing="0" cellpadding="20">
-        <tr>
-            <td>
-                <h2>Contact Form</h2>
-                <form action="contact.html" method="get">
-                    <label for="contact-name">Full Name:</label>
-                    <input type="text" id="contact-name" name="full-name" size="50">
-                    <br><br>
-
-                    <label for="contact-email">Email Address:</label>
-                    <input type="email" id="contact-email" name="email" size="50">
-                    <br><br>
-
-                    <label for="message">Message:</label>
-                    <br>
-                    <textarea id="message" name="message" rows="6" cols="50"></textarea>
-
-                    <br><br>
-                    <input type="submit" value="SEND MESSAGE">
-                </form>
-            </td>
-        </tr>
-    </table>
-</body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="style.css" rel="stylesheet"/>
+  <title>
+   Contact Our Pretoria CBD Dentist | Kulani’s Dentistry
+  </title>
+  <meta content="Contact Kulani’s Dentistry at 125 Pretorius Street, Pretoria Central. See opening hours, explore the area map and prepare a contact email." name="description"/>
+  <meta content="dentist Pretorius Street, contact dentist Pretoria CBD, Pretoria dental clinic" name="keywords"/>
+  <meta content="strict-origin-when-cross-origin" name="referrer"/>
+  <link href="images/tooth-logo.png" rel="icon"/>
+  <link href="vendor/leaflet/leaflet.css" rel="stylesheet"/>
+  <script defer="" src="vendor/leaflet/leaflet.js">
+  </script>
+  <script defer="" src="script.js">
+  </script>
+ </head>
+ <body class="contact-page">
+  <table border="1" cellpadding="20" cellspacing="0" width="100%">
+   <tr>
+    <td align="center">
+     <img alt="Tooth logo" decoding="async" height="80" src="images/tooth-logo.png" width="70"/>
+     <p class="brand-name">
+      Kulani's Dentistry
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td align="center">
+     <a href="index.html">
+      Home
+     </a>
+     |
+     <a href="about.html">
+      About
+     </a>
+     |
+     <a href="services.html">
+      Services
+     </a>
+     |
+     <a href="enquiry.html">
+      Enquiry
+     </a>
+     |
+     <a href="faq.html">
+      FAQ
+     </a>
+     |
+     <a aria-current="page" href="contact.html">
+      Contact
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="center">
+     <h1>
+      Contact Details
+     </h1>
+    </td>
+   </tr>
+  </table>
+  <table border="1" cellpadding="20" cellspacing="0" width="100%">
+   <tr>
+    <td>
+     <h2>
+      Telephone Number
+     </h2>
+     <p>
+      081 86042 35
+     </p>
+    </td>
+    <td>
+     <h2>
+      Email Address
+     </h2>
+     <p>
+      info@kulanisdentistry.co.za
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <h2>
+      Operating Hours
+     </h2>
+     <p>
+      Monday to Friday: 08:00 - 17:00
+     </p>
+     <p>
+      Saturday: 08:00 - 13:00
+     </p>
+     <p>
+      Sunday and public holidays: Closed
+     </p>
+    </td>
+    <td>
+     <h2>
+      Clinic Location
+     </h2>
+     <p>
+      125 Pretorius Street
+     </p>
+     <p>
+      Pretoria Central, Pretoria, 0002
+     </p>
+     <p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=125+Pretorius+Street+Pretoria" rel="noopener noreferrer" target="_blank">
+       VIEW MAP AND DIRECTIONS
+      </a>
+     </p>
+    </td>
+   </tr>
+  </table>
+  <section aria-labelledby="map-heading" class="content-section">
+   <h2 id="map-heading">
+    Find us in Pretoria CBD
+   </h2>
+   <p>
+    Clinic address: 125 Pretorius Street, Pretoria Central. The map shows the approximate CBD area and Pretoria Station as a travel landmark.
+   </p>
+   <div class="map-controls">
+    <button id="show-clinic" type="button">
+     Show clinic area
+    </button>
+    <button id="show-station" type="button">
+     Show Pretoria Station
+    </button>
+    <button id="show-all" type="button">
+     Show both locations
+    </button>
+   </div>
+   <iframe id="map-fallback" title="Map of Pretoria CBD and Pretoria Station" src="https://www.openstreetmap.org/export/embed.html?bbox=28.175%2C-25.764%2C28.202%2C-25.739&amp;layer=mapnik&amp;marker=-25.7464%2C28.1878" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+   <div hidden="" aria-label="Interactive map of Pretoria CBD and Pretoria Station" id="clinic-map" role="region">
+   </div>
+   <p id="map-status" role="status">
+   </p>
+   <p>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=125+Pretorius+Street+Pretoria" rel="noopener noreferrer" target="_blank">
+     Directions to the clinic address
+    </a>
+    ·
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Pretoria+Station" rel="noopener noreferrer" target="_blank">
+     Directions to Pretoria Station
+    </a>
+   </p>
+  </section>
+  <table border="1" cellpadding="20" cellspacing="0" width="100%">
+   <tr>
+    <td>
+     <h2>
+      Contact Form
+     </h2>
+     <form action="mailto:info@kulanisdentistry.co.za" enctype="text/plain" id="contact-form" method="post">
+      <p>
+       Fields marked * are required. This form prepares an email for you to review and send in your email app.
+      </p>
+      <label for="contact-name">
+       Full Name: *
+      </label>
+      <input autocomplete="name" id="contact-name" maxlength="80" minlength="2" name="full-name" required="" size="50" type="text"/>
+      <br/>
+      <br/>
+      <label for="contact-email">
+       Email Address: *
+      </label>
+      <input autocomplete="email" id="contact-email" maxlength="120" name="email" required="" size="50" type="email"/>
+      <br/>
+      <br/>
+      <label for="message-type">
+       Message Type: *
+      </label>
+      <select id="message-type" name="message-type" required="">
+       <option value="">
+        Please choose
+       </option>
+       <option>
+        General Question
+       </option>
+       <option>
+        Appointment Change
+       </option>
+       <option>
+        Payment Question
+       </option>
+       <option>
+        Feedback
+       </option>
+      </select>
+      <br/>
+      <br/>
+      <label for="message">
+       Message: *
+      </label>
+      <br/>
+      <textarea cols="50" id="message" maxlength="1000" minlength="10" name="message" required="" rows="6"></textarea>
+      <br/>
+      <br/>
+      <p class="consent-row">
+       <input id="contact-consent" name="consent" required="" type="checkbox" value="yes"/>
+       <label for="contact-consent">
+        I agree to my details being used to reply to this message. *
+       </label>
+      </p>
+      <input type="submit" value="PREPARE EMAIL"/>
+      <div aria-live="polite" class="form-result" id="contact-result" role="status">
+      </div>
+      <noscript>
+       <p>
+        Enable JavaScript to prepare the email, or email info@kulanisdentistry.co.za directly.
+       </p>
+      </noscript>
+     </form>
+    </td>
+   </tr>
+  </table>
+  <footer>
+   <p>
+    Kulani’s Dentistry · Pretoria CBD ·
+    <a href="tel:+27818604235">
+     081 86042 35
+    </a>
+   </p>
+   <p>
+    <a href="services.html">
+     Dental services
+    </a>
+    ·
+    <a href="enquiry.html">
+     Appointment enquiry
+    </a>
+    ·
+    <a href="contact.html">
+     Contact us
+    </a>
+   </p>
+  </footer>
+  <button hidden="" id="back-to-top" type="button">
+   Back to top ↑
+  </button>
+ </body>
 </html>

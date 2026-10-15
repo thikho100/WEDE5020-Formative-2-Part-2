@@ -1,88 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Kulani's Dentistry - Staff Appointment Page</title>
-</head>
-<body>
-    <table border="1" width="100%" cellspacing="0" cellpadding="20">
-        <tr>
-            <td>
-                <h1>Kulani's Dentistry - Staff Appointment Page</h1>
-                <p>Staff only</p>
-            </td>
-            <td align="center">
-                <a href="staff-login.html">LOG OUT</a>
-            </td>
-        </tr>
-    </table>
-
-    <table border="1" width="100%" cellspacing="0" cellpadding="15">
-        <tr>
-            <td colspan="6"><h2>Appointment Requests</h2></td>
-        </tr>
-        <tr>
-            <th>Patient</th>
-            <th>Treatment</th>
-            <th>Dentist</th>
-            <th>Date and Time</th>
-            <th>Status</th>
-            <th>Action</th>
-        </tr>
-        <tr>
-            <td>Patient 1</td>
-            <td>Check-up</td>
-            <td>Dentist 1</td>
-            <td>10 Aug / 10:00</td>
-            <td>Waiting</td>
-            <td>
-                <button type="button">Confirm</button>
-                <button type="button">Change</button>
-                <button type="button">Cancel</button>
-            </td>
-        </tr>
-        <tr>
-            <td>Patient 2</td>
-            <td>Cleaning</td>
-            <td>Dentist 2</td>
-            <td>11 Aug / 09:00</td>
-            <td>Confirmed</td>
-            <td>
-                <button type="button">Change</button>
-                <button type="button">Cancel</button>
-            </td>
-        </tr>
-    </table>
-
-    <table border="1" width="100%" cellspacing="0" cellpadding="15">
-        <tr>
-            <td><h2>Available Appointment Times</h2></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Dentist 1 - Monday: 09:00, 10:00, 11:00</p>
-                <p>Dentist 2 - Monday: 09:00, 11:00, 14:00</p>
-                <p>Dentist 3 - Monday: 08:00, 10:00, 15:00</p>
-                <button type="button">UPDATE TIMES</button>
-            </td>
-        </tr>
-    </table>
-
-    <table border="1" width="100%" cellspacing="0" cellpadding="15">
-        <tr>
-            <td><h2>Appointment Report</h2></td>
-        </tr>
-        <tr>
-            <td>
-                <p>Waiting: 1</p>
-                <p>Confirmed: 1</p>
-                <p>Changed: 0</p>
-                <p>Cancelled: 0</p>
-                <button type="button">VIEW REPORT</button>
-            </td>
-        </tr>
-    </table>
-</body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="style.css" rel="stylesheet"/>
+  <title>
+   Appointment Layout Preview | Kulani’s Dentistry
+  </title>
+  <meta content="Sample appointment page retained from Part 2." name="description"/>
+  <meta content="appointment layout preview" name="keywords"/>
+  <meta content="strict-origin-when-cross-origin" name="referrer"/>
+  <link href="images/tooth-logo.png" rel="icon"/>
+  <script defer="" src="script.js">
+  </script>
+  <meta content="noindex, nofollow" name="robots"/>
+ </head>
+ <body class="admin-page">
+  <table border="1" cellpadding="20" cellspacing="0" width="100%">
+   <tr>
+    <td>
+     <h1>
+      Staff Appointment Page – Layout Preview
+     </h1>
+     <p>
+      Sample records from Part 2. This page is a layout preview, not a live patient system.
+     </p>
+    </td>
+    <td align="center">
+     <a href="staff-login.html">
+      LOG OUT
+     </a>
+    </td>
+   </tr>
+  </table>
+  <table border="1" cellpadding="15" cellspacing="0" width="100%">
+   <tr>
+    <td colspan="6">
+     <h2>
+      Appointment Requests
+     </h2>
+    </td>
+   </tr>
+   <tr>
+    <th>
+     Patient
+    </th>
+    <th>
+     Treatment
+    </th>
+    <th>
+     Dentist
+    </th>
+    <th>
+     Date and Time
+    </th>
+    <th>
+     Status
+    </th>
+    <th>
+     Action
+    </th>
+   </tr>
+   <tr>
+    <td>
+     Patient 1
+    </td>
+    <td>
+     Check-up
+    </td>
+    <td>
+     Dentist 1
+    </td>
+    <td>
+     10 Aug / 10:00
+    </td>
+    <td>
+     Waiting
+    </td>
+    <td>
+     <button disabled="" title="Preview only" type="button">
+      Confirm
+     </button>
+     <button disabled="" title="Preview only" type="button">
+      Change
+     </button>
+     <button disabled="" title="Preview only" type="button">
+      Cancel
+     </button>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Patient 2
+    </td>
+    <td>
+     Cleaning
+    </td>
+    <td>
+     Dentist 2
+    </td>
+    <td>
+     11 Aug / 09:00
+    </td>
+    <td>
+     Confirmed
+    </td>
+    <td>
+     <button disabled="" title="Preview only" type="button">
+      Change
+     </button>
+     <button disabled="" title="Preview only" type="button">
+      Cancel
+     </button>
+    </td>
+   </tr>
+  </table>
+  <table border="1" cellpadding="15" cellspacing="0" width="100%">
+   <tr>
+    <td>
+     <h2>
+      Available Appointment Times
+     </h2>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p>
+      Dentist 1 - Monday: 09:00, 10:00, 11:00
+     </p>
+     <p>
+      Dentist 2 - Monday: 09:00, 11:00, 14:00
+     </p>
+     <p>
+      Dentist 3 - Monday: 08:00, 10:00, 15:00
+     </p>
+     <button disabled="" title="Preview only" type="button">
+      UPDATE TIMES
+     </button>
+    </td>
+   </tr>
+  </table>
+  <table border="1" cellpadding="15" cellspacing="0" width="100%">
+   <tr>
+    <td>
+     <h2>
+      Appointment Report
+     </h2>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p>
+      Waiting: 1
+     </p>
+     <p>
+      Confirmed: 1
+     </p>
+     <p>
+      Changed: 0
+     </p>
+     <p>
+      Cancelled: 0
+     </p>
+     <button disabled="" title="Preview only" type="button">
+      VIEW REPORT
+     </button>
+    </td>
+   </tr>
+  </table>
+  <footer>
+   <p>
+    Kulani’s Dentistry · Pretoria CBD ·
+    <a href="tel:+27818604235">
+     081 86042 35
+    </a>
+   </p>
+   <p>
+    <a href="services.html">
+     Dental services
+    </a>
+    ·
+    <a href="enquiry.html">
+     Appointment enquiry
+    </a>
+    ·
+    <a href="contact.html">
+     Contact us
+    </a>
+   </p>
+  </footer>
+  <button hidden="" id="back-to-top" type="button">
+   Back to top ↑
+  </button>
+ </body>
 </html>

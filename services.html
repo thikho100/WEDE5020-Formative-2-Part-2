@@ -1,86 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Kulani's Dentistry - Services</title>
-</head>
-<body>
-    <table border="1" width="100%" cellspacing="0" cellpadding="20">
-        <tr>
-            <td align="center">
-                <img src="picture8.png" alt="Tooth logo" width="70">
-                <h1>Kulani's Dentistry</h1>
-            </td>
-        </tr>
-        <tr>
-            <td align="center">
-                <a href="index.html">Home</a> |
-                <a href="about.html">About</a> |
-                <a href="services.html">Services</a> |
-                <a href="enquiry.html">Booking</a> |
-                <a href="faq.html">FAQ</a> |
-                <a href="contact.html">Contact</a>
-            </td>
-        </tr>
-        <tr>
-            <td align="center">
-                <h1>Our Dental Services</h1>
-            </td>
-        </tr>
-    </table>
-
-    <table border="1" width="100%" cellspacing="0" cellpadding="20">
-        <tr>
-            <td align="center">
-                <img src="picture1.jpg" alt="Dental check-up" width="250">
-                <h2>Dental Check-ups</h2>
-                <p>Examinations of the teeth and gums to identify problems early.</p>
-                <p>Expected time: 30 minutes</p>
-            </td>
-            <td align="center">
-                <img src="picture2.jpg" alt="Professional teeth cleaning" width="250">
-                <h2>Teeth Cleaning</h2>
-                <p>Removal of plaque, tartar and surface stains from the teeth.</p>
-                <p>Expected time: 30 - 45 minutes</p>
-            </td>
-            <td align="center">
-                <img src="picture7.jpg" alt="Preventive dental care" width="250">
-                <h2>Preventive Care</h2>
-                <p>Oral hygiene advice and treatment that helps prevent tooth decay.</p>
-                <p>Expected time: 30 minutes</p>
-            </td>
-        </tr>
-        <tr>
-            <td align="center">
-                <img src="picture6.jpg" alt="Dental filling treatment" width="250">
-                <h2>Dental Fillings</h2>
-                <p>Treatment for cavities that restores damaged teeth.</p>
-                <p>Expected time: 45 - 60 minutes</p>
-            </td>
-            <td align="center">
-                <img src="picture5.jpg" alt="Dentist examining a patient" width="250">
-                <h2>Tooth Extractions</h2>
-                <p>Removal of teeth that cannot be repaired or are causing pain.</p>
-                <p>Expected time: 45 - 60 minutes</p>
-            </td>
-            <td align="center">
-                <img src="picture4.jpg" alt="Emergency dental treatment" width="250">
-                <h2>Emergency Dental Care</h2>
-                <p>Urgent attention for toothache, broken teeth and dental injuries.</p>
-                <p>Expected time: 30 - 45 minutes</p>
-            </td>
-        </tr>
-    </table>
-
-    <table border="1" width="100%" cellspacing="0" cellpadding="20">
-        <tr>
-            <td align="center">
-                <h2>Would you like to make an appointment?</h2>
-                <a href="enquiry.html">BOOK APPOINTMENT</a>
-            </td>
-        </tr>
-    </table>
-</body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="style.css" rel="stylesheet"/>
+  <title>
+   Dental Services in Pretoria CBD | Kulani’s Dentistry
+  </title>
+  <meta content="Search our dental services in Pretoria CBD, including check-ups, teeth cleaning, fillings and extractions. View estimated treatment times." name="description"/>
+  <meta content="dental services Pretoria, teeth cleaning Pretoria CBD, dental check-ups" name="keywords"/>
+  <meta content="strict-origin-when-cross-origin" name="referrer"/>
+  <link href="images/tooth-logo.png" rel="icon"/>
+  <script defer="" src="script.js">
+  </script>
+ </head>
+ <body class="services-page">
+  <table border="1" cellpadding="20" cellspacing="0" width="100%">
+   <tr>
+    <td align="center">
+     <img alt="Tooth logo" decoding="async" height="80" src="images/tooth-logo.png" width="70"/>
+     <p class="brand-name">
+      Kulani's Dentistry
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td align="center">
+     <a href="index.html">
+      Home
+     </a>
+     |
+     <a href="about.html">
+      About
+     </a>
+     |
+     <a aria-current="page" href="services.html">
+      Services
+     </a>
+     |
+     <a href="enquiry.html">
+      Enquiry
+     </a>
+     |
+     <a href="faq.html">
+      FAQ
+     </a>
+     |
+     <a href="contact.html">
+      Contact
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="center">
+     <h1>
+      Our Dental Services
+     </h1>
+    </td>
+   </tr>
+  </table>
+  <section aria-label="Search dental services" class="content-section service-tools">
+   <p>
+    Explore dental services in Pretoria CBD. Estimated treatment times may vary after an examination.
+   </p>
+   <label for="service-search">
+    Search services:
+   </label>
+   <input id="service-search" placeholder="Try cleaning or fillings" type="search"/>
+   <label for="service-category">
+    Care type:
+   </label>
+   <select id="service-category">
+    <option value="all">
+     All services
+    </option>
+    <option>
+     Routine care
+    </option>
+    <option>
+     Treatment
+    </option>
+    <option>
+     Urgent care
+    </option>
+   </select>
+   <label for="service-sort">
+    Sort by:
+   </label>
+   <select id="service-sort">
+    <option value="default">
+     Usual order
+    </option>
+    <option value="az">
+     Name: A to Z
+    </option>
+    <option value="time">
+     Shortest treatment first
+    </option>
+   </select>
+   <button id="reset-services" type="button">
+    Reset
+   </button>
+   <p aria-live="polite" id="search-status" role="status">
+    6 services. Enable JavaScript to search and sort.
+   </p>
+  </section>
+  <table border="1" cellpadding="20" cellspacing="0" class="service-table" id="service-grid" width="100%">
+   <tr>
+    <td align="center" data-service="check-up" data-minutes="30" data-category="Routine care">
+     <img alt="Dental check-up" decoding="async" height="167" loading="lazy" src="images/dental-check-up.jpg" width="250"/>
+     <h2>
+      Dental Check-ups
+     </h2>
+     <p>
+      Examinations of the teeth and gums to identify problems early.
+     </p>
+     <p>
+      Expected time: 30 minutes
+     </p>
+     <p>
+      <a href="enquiry.html?service=check-up">
+       Enquire about this service
+      </a>
+     </p>
+    </td>
+    <td align="center" data-service="teeth-cleaning" data-minutes="45" data-category="Routine care">
+     <img alt="Professional teeth cleaning" decoding="async" height="167" loading="lazy" src="images/teeth-cleaning.jpg" width="250"/>
+     <h2>
+      Teeth Cleaning
+     </h2>
+     <p>
+      Removal of plaque, tartar and surface stains from the teeth.
+     </p>
+     <p>
+      Expected time: 30 - 45 minutes
+     </p>
+     <p>
+      <a href="enquiry.html?service=teeth-cleaning">
+       Enquire about this service
+      </a>
+     </p>
+    </td>
+    <td align="center" data-service="preventive-care" data-minutes="30" data-category="Routine care">
+     <img alt="Preventive dental care" decoding="async" height="167" loading="lazy" src="images/tooth-brushing-advice.jpg" width="250"/>
+     <h2>
+      Preventive Care
+     </h2>
+     <p>
+      Oral hygiene advice and treatment that helps prevent tooth decay.
+     </p>
+     <p>
+      Expected time: 30 minutes
+     </p>
+     <p>
+      <a href="enquiry.html?service=preventive-care">
+       Enquire about this service
+      </a>
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td align="center" data-service="dental-fillings" data-minutes="60" data-category="Treatment">
+     <img alt="Dental filling treatment" decoding="async" height="167" loading="lazy" src="images/dental-filling-treatment.jpg" width="250"/>
+     <h2>
+      Dental Fillings
+     </h2>
+     <p>
+      Treatment for cavities that restores damaged teeth.
+     </p>
+     <p>
+      Expected time: 45 - 60 minutes
+     </p>
+     <p>
+      <a href="enquiry.html?service=dental-fillings">
+       Enquire about this service
+      </a>
+     </p>
+    </td>
+    <td align="center" data-service="tooth-extractions" data-minutes="60" data-category="Treatment">
+     <img alt="Dentist examining a patient" decoding="async" height="167" loading="lazy" src="images/dentist-at-work.jpg" width="250"/>
+     <h2>
+      Tooth Extractions
+     </h2>
+     <p>
+      Removal of teeth that cannot be repaired or are causing pain.
+     </p>
+     <p>
+      Expected time: 45 - 60 minutes
+     </p>
+     <p>
+      <a href="enquiry.html?service=tooth-extractions">
+       Enquire about this service
+      </a>
+     </p>
+    </td>
+    <td align="center" data-service="emergency-care" data-minutes="45" data-category="Urgent care">
+     <img alt="Emergency dental treatment" decoding="async" height="167" loading="lazy" src="images/dental-patient-chair.jpg" width="250"/>
+     <h2>
+      Emergency Dental Care
+     </h2>
+     <p>
+      Urgent attention for toothache, broken teeth and dental injuries.
+     </p>
+     <p>
+      Expected time: 30 - 45 minutes
+     </p>
+     <p>
+      <a href="enquiry.html?service=emergency-care">
+       Enquire about this service
+      </a>
+     </p>
+    </td>
+   </tr>
+  </table>
+  <table border="1" cellpadding="20" cellspacing="0" width="100%">
+   <tr>
+    <td align="center">
+     <h2>
+      Would you like to make an appointment?
+     </h2>
+     <a href="enquiry.html">
+      BOOK APPOINTMENT
+     </a>
+    </td>
+   </tr>
+  </table>
+  <footer>
+   <p>
+    Kulani’s Dentistry · Pretoria CBD ·
+    <a href="tel:+27818604235">
+     081 86042 35
+    </a>
+   </p>
+   <p>
+    <a href="services.html">
+     Dental services
+    </a>
+    ·
+    <a href="enquiry.html">
+     Appointment enquiry
+    </a>
+    ·
+    <a href="contact.html">
+     Contact us
+    </a>
+   </p>
+  </footer>
+  <button hidden="" id="back-to-top" type="button">
+   Back to top ↑
+  </button>
+ </body>
 </html>

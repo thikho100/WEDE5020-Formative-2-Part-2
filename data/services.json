@@ -1,0 +1,62 @@
+[
+  {
+    "id": "check-up",
+    "name": "Dental Check-ups",
+    "description": "Examinations of the teeth and gums to identify problems early.",
+    "duration": "30 minutes",
+    "minutes": 30,
+    "category": "Routine care",
+    "image": "dental-check-up.jpg",
+    "alt": "Dentist showing a dental tool to a patient"
+  },
+  {
+    "id": "teeth-cleaning",
+    "name": "Teeth Cleaning",
+    "description": "Removal of plaque, tartar and surface stains from the teeth.",
+    "duration": "30–45 minutes",
+    "minutes": 45,
+    "category": "Routine care",
+    "image": "teeth-cleaning.jpg",
+    "alt": "Dental professional wearing a face mask"
+  },
+  {
+    "id": "preventive-care",
+    "name": "Preventive Care",
+    "description": "Oral hygiene advice and treatment that helps prevent tooth decay.",
+    "duration": "30 minutes",
+    "minutes": 30,
+    "category": "Routine care",
+    "image": "tooth-brushing-advice.jpg",
+    "alt": "Dentist demonstrating how to brush teeth"
+  },
+  {
+    "id": "dental-fillings",
+    "name": "Dental Fillings",
+    "description": "Treatment for cavities that restores damaged teeth.",
+    "duration": "45–60 minutes",
+    "minutes": 60,
+    "category": "Treatment",
+    "image": "dental-filling-treatment.jpg",
+    "alt": "Dentist treating a patient’s teeth"
+  },
+  {
+    "id": "tooth-extractions",
+    "name": "Tooth Extractions",
+    "description": "Removal of teeth that cannot be repaired or are causing pain.",
+    "duration": "45–60 minutes",
+    "minutes": 60,
+    "category": "Treatment",
+    "image": "dentist-at-work.jpg",
+    "alt": "Dentist working beside a treatment chair"
+  },
+  {
+    "id": "emergency-care",
+    "name": "Emergency Dental Care",
+    "description": "Attention for toothache, broken teeth and dental injuries during opening hours.",
+    "duration": "30–45 minutes",
+    "minutes": 45,
+    "category": "Urgent care",
+    "image": "dental-patient-chair.jpg",
+    "alt": "Patient sitting in a dental chair"
+  }
+]

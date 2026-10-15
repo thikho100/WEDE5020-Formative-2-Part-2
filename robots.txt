@@ -1,0 +1,5 @@
+# Template for review. The build replaces this with the final deployment address.
+User-agent: *
+Allow: /
+Disallow: /.netlify/
+Sitemap: https://example.invalid/sitemap.xml

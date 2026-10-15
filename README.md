@@ -1,95 +1,208 @@
-# Kulani's Dentistry
+# Kulani’s Dentistry
 
-WEDE5020 Part 2 - CSS Styling and Responsive Design
+WEDE5020 – Part 3: Enhancing Functionality and SEO
 
 Student: Thikho Nevhutalu  
 Student number: ST10526854
 
-## GitHub repository
-
-https://github.com/thikho100/WEDE5020-Formative-2-Part-2
-
 ## Project
 
-Kulani's Dentistry is a dentistry website based in Pretoria CBD. The website contains the Home, About, Services, Booking, FAQ, Contact, Staff Login and Staff Appointment pages.
+This project continues the Part 2 dentistry website. The practice is based in Pretoria CBD and provides dental check-ups, cleaning, preventive care, fillings, extractions and emergency dental care. The blue and white design and external stylesheet from Part 2 are retained.
 
-Part 2 focuses on styling the website with an external CSS file, improving the layout and making the pages responsive on desktop, tablet and mobile screens.
+Part 2 repository recorded in the supplied work: https://github.com/thikho100/WEDE5020-Formative-2-Part-2
 
-## Files
+Part 3 repository and published URL: **not supplied or published yet**. Add the correct lecturer-issued repository link and live website URL after deployment. A ZIP file alone is not the final submission required by the brief.
 
-- `index.html` - Home page
-- `about.html` - About page
-- `services.html` - Dental services
-- `enquiry.html` - Appointment booking form
-- `faq.html` - Frequently asked questions
-- `contact.html` - Contact information and contact form
-- `staff-login.html` - Staff login
-- `admin.html` - Staff appointment page
-- `style.css` - Part 2 stylesheet
+## Run the website
 
-## Part 2 CSS features
+1. Extract the whole ZIP folder.
+2. Double-click `index.html` in Edge or Chrome. No installation is needed.
+3. `START-WEBSITE.cmd` is an optional shortcut that opens the same HTML page.
 
-The stylesheet includes:
+Search, gallery, FAQ and enquiry/contact validation work without Node.js. The enquiry uses the same checks in the browser and on the server and shows an email preview. Live map images require internet. Extensions that disable JavaScript must open the page in a normal browser tab.
 
-- blue and white colour theme
-- Aptos/Arial fonts
-- spacing, borders and shadows
-- Flexbox header layout and CSS Grid responsive layouts
-- responsive images
-- desktop, tablet and mobile media queries
-- hover and focus effects
-- button press effect
-- logo rotation
-- booking-arrow rotation
-- service image magnification
-- Staff Login text magnification
-- form focus effects
-- FAQ plus-sign rotation
-- background image on the home banner
-- entrance animation
-- pseudo-classes and pseudo-elements
-- responsive admin appointment table
+For optional AJAX development testing only, run `node server.cjs` and open `http://localhost:3000`. The published Netlify site also supports AJAX; visitors need no software installation.
 
-## Responsive design
+## Website pages
 
-The website has breakpoints at approximately:
+| File | Purpose |
+| --- | --- |
+| index.html | Home page and links to services and enquiries |
+| about.html | Practice history and interactive gallery |
+| services.html | Search, category filter and sorting of services |
+| enquiry.html | Appointment enquiry, validation and asynchronous processing |
+| faq.html | Expandable questions and answers |
+| contact.html | Interactive map and contact email form |
+| staff-login.html | Staff access notice; secure staff authentication is not connected |
+| admin.html | Original Part 2 appointment layout with sample records |
 
-- Desktop: above 960px
-- Tablet: 601px to 960px
-- Mobile: 600px and below
+Other files:
 
-Service cards move from three columns on desktop, to two columns on tablet and one column on mobile. Forms and contact sections also become single-column on smaller screens.
+- `style.css`: original external CSS plus Part 3 styles and responsive rules.
+- `script.js`: JavaScript interactions, form validation and Fetch requests.
+- `CODE-GUIDE.md`: simple explanations of the code and what each file does.
+- `data/services.json`: dental service catalogue loaded with Fetch [6].
+- `images/`: renamed original images; source credits appear below.
+- `vendor/leaflet/`: Leaflet 1.9.4 and its BSD 2-Clause licence [9].
+- `enquiry-check.js`: shared browser/server input checks and treatment details.
+- `lib/enquiry.cjs`: loads those checks for the server.
+- `netlify/functions/enquiry.js`: POST handler for the enquiry form.
+- `server.cjs`: local server that uses the same enquiry handler.
+- `build.cjs`: creates a public `dist` folder, live canonical URLs, sitemap and robots file.
+- `netlify.toml` and `_headers`: deployment and response-header configuration.
+- `START-HERE.html`: opening, testing and submission instructions.
+- `PART2-README.md`: unchanged copy of the previous README.
+- `screenshots/`: supplied Part 2 evidence; `screenshots/part3/` contains any newly captured Part 3 evidence.
 
-## Stylesheet linking
+## Part 3 functionality
 
-The external `style.css` file is linked in the `<head>` of every HTML page. The original HTML structure and content were kept the same apart from this stylesheet link.
+### Interactive elements
 
-## Responsive screenshots
+- JavaScript FAQ accordion with buttons, `aria-expanded` and labelled answer panels.
+- Native dialog lightbox with next/previous controls, arrow keys, Escape and focus return [8].
+- Five gallery photographs from the existing image collection.
+- CSS transitions and a JavaScript answer animation, respecting reduced-motion preferences.
+- Back-to-top button shown after scrolling.
+- Service cards created with DOM methods and `textContent` rather than inserting user input as HTML.
 
-### Desktop view
+### Dynamic content and search
 
-![Desktop view](desktop-1917x1078.png)
+The services page loads `data/services.json` asynchronously [6]. Search matches service names and descriptions. Users can filter by care type and sort alphabetically or by expected treatment length. The result count updates as the user types. There is a clear no-results message and a reset button. Existing HTML cards remain available without JavaScript; a built-in catalogue supports search if the JSON request fails.
 
-### Tablet view
+### Interactive map
 
-![Tablet view](tablet-768x1024.png)
+The contact page uses Leaflet with OpenStreetMap tiles [9], [12]. Users can pan, zoom, open marker popups and move between the CBD area and Pretoria Station. Attribution remains visible. Direction links remain usable if map tiles fail.
 
-### Mobile view
+The clinic marker is an approximate CBD area marker, not a verified street-level pin. Pretoria Station is a travel landmark, not a second clinic branch. This provides two locations without inventing another branch. Verify the clinic’s exact coordinates before presenting the map as a precise clinic location. The original address, 125 Pretorius Street, is kept for directions.
 
-![Mobile view](mobile-390x884.png)
+### Appointment enquiry
+
+HTML constraints and JavaScript validate the name, telephone, email, treatment, dentist, date, time, new-patient choice, consent and optional information [7]. Each field has a label and an associated error message. Date checks use South African time. Sunday and past dates are rejected; past times and Saturday afternoon options are unavailable. The server repeats important validation, rejects oversized/invalid requests and checks allowed values.
+
+Direct HTML files use the shared browser checks. HTTP previews fall back to those checks if the endpoint is unavailable. On a server, `fetch()` sends JSON with POST to `/.netlify/functions/enquiry` without reloading the page. A relevant response gives the treatment duration and explains opening hours. Loading, success, invalid-input, timeout and unavailable-service states are handled. The response does not claim a real slot is available. The user can prepare an email request afterwards.
+
+The server does not keep the submitted personal details, notify staff or reserve a booking. Dentist availability and public-holiday closures require receptionist confirmation. No prices are displayed, in line with the existing project.
+
+### Contact email
+
+The contact form collects a name, email address, message type, message and consent. JavaScript validates it and shows a preview. The email link encodes the subject/body for `info@kulanisdentistry.co.za`. The user reviews and sends it using their email app. A copy button supports webmail. The site does not claim that the message was sent automatically. The recipient address comes from the supplied project and mailbox delivery has not been verified. No test emails have been sent.
+
+### Staff pages
+
+The original staff login submitted a password using GET, which would put it in the URL. The unsafe form is removed. Staff sign-in requires a real authentication service. The original admin layout remains as a clearly labelled preview with disabled sample actions. Client-side code and robots.txt are not access controls.
+
+## Search engine optimisation
+
+The implementation follows relevant guidance in Google’s SEO Starter Guide [10].
+
+| Page | Target phrases |
+| --- | --- |
+| Home | dentist Pretoria CBD; dental care Pretoria |
+| About | Pretoria dental practice; family dental care |
+| Services | dental services Pretoria; teeth cleaning Pretoria CBD |
+| Enquiry | dental appointment Pretoria CBD |
+| FAQ | dental appointment questions; dentist opening hours |
+| Contact | dentist Pretorius Street; contact dentist Pretoria CBD |
+
+These are chosen from the practice’s services and location. No search-volume study or ranking result is claimed. Each page has a unique title, description and relevant keywords meta tag. The keywords tag is included because it appears in the marking rubric; Google does not use that tag for ranking [10]. Content uses the phrases naturally, rather than repeating keywords excessively.
+
+There is one H1 per page, descriptive image filenames and alt text, internal links and readable page filenames. Image dimensions and lazy loading reduce layout movement and unnecessary downloads. The original images are small and are reused. Local scripts are deferred. CSS supports desktop, tablet and mobile widths.
+
+The source sitemap uses `example.invalid` as an explicit placeholder. `build.cjs` creates the live sitemap, robots.txt and canonical links from the deployment URL. Staff pages use `noindex, nofollow` and are omitted from the sitemap. They are not blocked in robots.txt, so a crawler can read the noindex instruction.
+
+### Off-page SEO work still to complete
+
+- With the practice owner’s permission, add the published website link to its existing social profile.
+- Ask relevant, legitimate local directories or partner organisations to link to the website.
+- Confirm that the practice name, address and telephone match any verified business listing.
+- Keep evidence of actual posts/listings if required by the lecturer.
+
+These are proposed actions. No backlinks, directory submissions or social posts have been created or claimed.
+
+## Security and privacy
+
+The local server only serves public files. The Netlify build publishes `dist` and deploys the function separately. It does not publish the source notes or server code as downloadable website pages. The enquiry endpoint restricts methods, checks input sizes and types, validates dates and choices, and uses a no-store response. Personal details are not written to browser storage or server files. No credentials, mail tokens or API keys are in the project.
+
+The hosting header file sets a content security policy, clickjacking protection, content-type protection and limited browser permissions. HTTPS must be checked after deployment. Links opening a new tab include `noopener noreferrer`. Map tile requests go to OpenStreetMap and email is sent through the user’s own mail app. The consent boxes are project features, not a claim of a complete legal compliance review.
+
+## Deployment and submission
+
+This project is prepared for a Git-connected Netlify deployment [11]. Ordinary static hosting alone will not execute the enquiry POST endpoint.
+
+1. Use the correct Part 3 GitHub repository provided/approved by the lecturer. Keep the existing Part 2 history if instructed; do not overwrite or delete the old repository blindly.
+2. Commit the real changes with descriptive messages. Do not fabricate past commits or dates.
+3. Import that repository into Netlify. The included `netlify.toml` specifies the build command, `dist` publish folder and functions directory.
+4. Deploy, then confirm that all pages, map tiles and the AJAX POST work on the live HTTPS address.
+5. Check the published `sitemap.xml`, `robots.txt` and canonical URLs. If the site name changes, deploy again so the build regenerates them.
+6. Add the actual repository and live URL at the top of this README. Capture live evidence and submit the required links.
+
+Netlify supplies `URL` during a normal build. For a manual build, run `node build.cjs https://your-actual-site-address`. Do not deploy a test build containing `example.invalid`. Drag-and-dropping only the static files will not deploy the serverless function.
+
+Deployment has not been performed from this folder. Live account access, the target repository and a verified live address are still needed.
+
+## Changelog
+
+### 7 October 2026 – Open without installation
+
+- Added shared browser/server enquiry checks and a visible email preview.
+- Direct files and static previews work without Node.js; hosted AJAX is retained.
+- The launcher now opens index.html directly.
+- Kept the existing design and map controls; live map tiles still need internet.
+
+
+### 17 September 2026 – Part 2 (retained history)
+
+- Added external CSS linked to all eight HTML pages.
+- Added responsive layouts, animation, hover/focus effects, transforms and image backgrounds.
+- Added the README and desktop/tablet/mobile evidence.
+
+### 5 October 2026 – Part 3
+
+- Added `script.js` and deferred script links to the pages.
+- Converted FAQ content to keyboard-operable accordion panels.
+- Added the About page gallery and native dialog lightbox.
+- Added a JSON service catalogue, live search, category filter, sorting and empty-state handling.
+- Added Leaflet, two map locations, marker popups and direction links.
+- Added labelled form controls, message type, consent and accessible validation errors.
+- Added an asynchronous enquiry endpoint with matching local and Netlify processing.
+- Added the treatment-duration response and email request link, without claiming a confirmed booking.
+- Added contact email preview, encoded mail link and copy option.
+- Renamed image files and updated HTML, CSS and source credits.
+- Added page-specific SEO metadata, corrected heading hierarchy and added deployment-generated sitemap/canonical files.
+- Restricted the old decorative FAQ plus signs and added responsive styles for new controls.
+- Removed the unsafe GET password form and marked the retained staff appointment page as a preview.
+- Added deployment configuration, response headers, opening instructions and test evidence.
+- Preserved the original README as `PART2-README.md`.
+
+### 5 October 2026 – Code simplification
+
+- Replaced compact arrow functions with ordinary functions in the project JavaScript.
+- Wrote out conditional branches and loop bodies on separate lines.
+- Replaced chained service filtering and fallback conversion with clear loops.
+- Added category and duration data to the existing service cards for the fallback search.
+- Replaced automatic form-data conversion with explicitly named fields.
+- Wrote out gallery wraparound and appointment-time checks using if statements.
+- Kept the existing appearance, feature controls, server checks and publishing setup.
+- Added CODE-GUIDE.md to explain the code.
+- Removed the pending lecturer-feedback section because no feedback was provided.
+
+## Testing
+
+See `TEST-RESULTS.md` for the checks actually performed and any limits. Live deployment, mailbox delivery and off-page SEO remain separate checks.
 
 ## Image source credits
 
+
 | Website file | Source |
 | --- | --- |
-| `picture1.jpg` | Nadezhda Moryak / Pexels - *Dentist Showing a Dental Tool to Patient* - https://www.pexels.com/photo/dentist-showing-a-dental-tool-to-patient-7800560/ |
-| `picture2.jpg` | Nadezhda Moryak / Pexels - *A Woman in White Coat Wearing Blue Face Mask* - https://www.pexels.com/photo/a-woman-in-white-coat-wearing-blue-face-mask-7803054/ |
-| `picture3.jpg` | Pavel Danilyuk / Pexels - *Screen and Dental Instruments in Doctors Office* - https://www.pexels.com/photo/screen-and-dental-instruments-in-doctors-office-6809639/ |
-| `picture4.jpg` | Nadezhda Moryak / Pexels - *A Woman Sitting on a Dental Chair* - https://www.pexels.com/photo/a-woman-sitting-on-a-dental-chair-7803058/ |
-| `picture5.jpg` | Arda Kaykısız / Pexels - *Redhead Dentist Working* - https://www.pexels.com/photo/redhead-dentist-working-19976581/ |
-| `picture6.jpg` | Andrea Piacquadio / Pexels - *Dentist Working on Woman's Teeth* - https://www.pexels.com/photo/dentist-working-working-on-woman-s-teeth-3779713/ |
-| `picture7.jpg` | Polina Zimmerman / Pexels - *Crop Female Dentist Showing Right Way of Teeth Cleaning* - https://www.pexels.com/photo/crop-female-dentist-showing-right-way-of-teeth-cleaning-3958092/ |
-| `picture8.png` | Rawpixel - black tooth silhouette PNG - https://www.rawpixel.com/image/12832085/png-black-white-logo-silhouette-generated-image-rawpixel |
+| `images/dental-check-up.jpg` | Nadezhda Moryak / Pexels - *Dentist Showing a Dental Tool to Patient* - https://www.pexels.com/photo/dentist-showing-a-dental-tool-to-patient-7800560/ |
+| `images/teeth-cleaning.jpg` | Nadezhda Moryak / Pexels - *A Woman in White Coat Wearing Blue Face Mask* - https://www.pexels.com/photo/a-woman-in-white-coat-wearing-blue-face-mask-7803054/ |
+| `images/dental-treatment-room.jpg` | Pavel Danilyuk / Pexels - *Screen and Dental Instruments in Doctors Office* - https://www.pexels.com/photo/screen-and-dental-instruments-in-doctors-office-6809639/ |
+| `images/dental-patient-chair.jpg` | Nadezhda Moryak / Pexels - *A Woman Sitting on a Dental Chair* - https://www.pexels.com/photo/a-woman-sitting-on-a-dental-chair-7803058/ |
+| `images/dentist-at-work.jpg` | Arda Kaykısız / Pexels - *Redhead Dentist Working* - https://www.pexels.com/photo/redhead-dentist-working-19976581/ |
+| `images/dental-filling-treatment.jpg` | Andrea Piacquadio / Pexels - *Dentist Working on Woman's Teeth* - https://www.pexels.com/photo/dentist-working-working-on-woman-s-teeth-3779713/ |
+| `images/tooth-brushing-advice.jpg` | Polina Zimmerman / Pexels - *Crop Female Dentist Showing Right Way of Teeth Cleaning* - https://www.pexels.com/photo/crop-female-dentist-showing-right-way-of-teeth-cleaning-3958092/ |
+| `images/tooth-logo.png` | Rawpixel - black tooth silhouette PNG - https://www.rawpixel.com/image/12832085/png-black-white-logo-silhouette-generated-image-rawpixel |
 
 ## CSS references
 
@@ -99,14 +212,21 @@ The external `style.css` file is linked in the `<head>` of every HTML page. The 
 [4] MDN Web Docs, "Using CSS animations." https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations/Using  
 [5] Orlando Pirates Football Club, official website. https://www.orlandopiratesfc.com/
 
-## Changelog
 
-### 17 September 2026 - Part 2 CSS redo
+## Part 3 references
 
-- Added a new external `style.css` based on the existing HTML structure.
-- Linked `style.css` to all eight HTML pages without restructuring the original HTML.
-- Added responsive desktop, tablet and mobile rules.
-- Added Flexbox header layout.
-- Added animation, hover, focus, transform, rotation and magnification effects.
-- Added a CSS background image and responsive form/table styling.
-- Added this README.
+[6] MDN Web Docs, “Using the Fetch API.” [Online]. Available: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch. [Accessed: 5 Oct. 2026].
+
+[7] MDN Web Docs, “Client-side form validation.” [Online]. Available: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation. [Accessed: 5 Oct. 2026].
+
+[8] MDN Web Docs, “<dialog>: The Dialog element.” [Online]. Available: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog. [Accessed: 5 Oct. 2026].
+
+[9] Leaflet, “Quick Start Guide.” [Online]. Available: https://leafletjs.com/examples/quick-start/. [Accessed: 5 Oct. 2026].
+
+[10] Google Search Central, “Search Engine Optimization (SEO) Starter Guide.” [Online]. Available: https://developers.google.com/search/docs/fundamentals/seo-starter-guide. [Accessed: 5 Oct. 2026].
+
+[11] Netlify, “Get started with functions.” [Online]. Available: https://docs.netlify.com/build/functions/get-started/. [Accessed: 5 Oct. 2026].
+
+[12] OpenStreetMap Foundation, “Tile Usage Policy.” [Online]. Available: https://operations.osmfoundation.org/policies/tiles/. [Accessed: 5 Oct. 2026].
+
+Direct HTML viewing uses an OpenStreetMap embedded map with zoom/pan and the three location controls. The wider view covers both areas and has one selected-location pin. Hosted pages retain the two Leaflet markers and fall back to the embedded map if loading fails. Internet and permission to display embedded content are required.

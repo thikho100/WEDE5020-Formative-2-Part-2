@@ -104,11 +104,11 @@ body > table:first-of-type tr:nth-child(2) a:focus {
     border-bottom-color: steelblue;
 }
 
-img[src="picture8.png"] {
+img[src="images/tooth-logo.png"] {
     transition: transform 0.4s ease;
 }
 
-img[src="picture8.png"]:hover {
+img[src="images/tooth-logo.png"]:hover {
     transform: rotate(-12deg) scale(1.05);
 }
 
@@ -117,56 +117,56 @@ a[href="index.html"] ~ a[href="about.html"] {
     white-space: nowrap;
 }
 
-body > table:nth-of-type(2) tr:nth-child(2) td:has(img[src="picture3.jpg"]) {
+body > table:nth-of-type(2) tr:nth-child(2) td:has(img[src="images/dental-treatment-room.jpg"]) {
     min-height: 420px;
     color: white;
     text-shadow: 0 1px 2px black;
     background-color: darkslategray;
-    background-image: linear-gradient(rgba(25, 50, 60, 0.75), rgba(25, 50, 60, 0.55)), url("picture3.jpg");
+    background-image: linear-gradient(rgba(25, 50, 60, 0.75), rgba(25, 50, 60, 0.55)), url("images/dental-treatment-room.jpg");
     background-position: center;
     background-size: cover;
 }
 
-body > table:nth-of-type(2) tr:nth-child(2) td:has(img[src="picture3.jpg"]) h1,
-body > table:nth-of-type(2) tr:nth-child(2) td:has(img[src="picture3.jpg"]) p {
+body > table:nth-of-type(2) tr:nth-child(2) td:has(img[src="images/dental-treatment-room.jpg"]) h1,
+body > table:nth-of-type(2) tr:nth-child(2) td:has(img[src="images/dental-treatment-room.jpg"]) p {
     color: white;
 }
 
-body > table:nth-of-type(2) tr:nth-child(2) td:has(img[src="picture3.jpg"]) img {
+body > table:nth-of-type(2) tr:nth-child(2) td:has(img[src="images/dental-treatment-room.jpg"]) img {
     display: none;
 }
 
 /* Service card layout */
-img[src="picture1.jpg"],
-img[src="picture2.jpg"],
-img[src="picture4.jpg"],
-img[src="picture5.jpg"],
-img[src="picture6.jpg"],
-img[src="picture7.jpg"] {
+img[src="images/dental-check-up.jpg"],
+img[src="images/teeth-cleaning.jpg"],
+img[src="images/dental-patient-chair.jpg"],
+img[src="images/dentist-at-work.jpg"],
+img[src="images/dental-filling-treatment.jpg"],
+img[src="images/tooth-brushing-advice.jpg"] {
     border-radius: 8px;
     box-shadow: 0 4px 12px lightgray;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-img[src="picture1.jpg"]:hover,
-img[src="picture2.jpg"]:hover,
-img[src="picture4.jpg"]:hover,
-img[src="picture5.jpg"]:hover,
-img[src="picture6.jpg"]:hover,
-img[src="picture7.jpg"]:hover {
+img[src="images/dental-check-up.jpg"]:hover,
+img[src="images/teeth-cleaning.jpg"]:hover,
+img[src="images/dental-patient-chair.jpg"]:hover,
+img[src="images/dentist-at-work.jpg"]:hover,
+img[src="images/dental-filling-treatment.jpg"]:hover,
+img[src="images/tooth-brushing-advice.jpg"]:hover {
     transform: scale(1.07);
     box-shadow: 0 8px 18px silver;
 }
 
 /* Give service tables a simple grid-like card appearance. */
-table:has(img[src="picture1.jpg"]):has(img[src="picture2.jpg"]) tr {
+table:has(img[src="images/dental-check-up.jpg"]):has(img[src="images/teeth-cleaning.jpg"]) tr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
 }
 
-table:has(img[src="picture1.jpg"]):has(img[src="picture2.jpg"]) td {
+table:has(img[src="images/dental-check-up.jpg"]):has(img[src="images/teeth-cleaning.jpg"]) td {
     background-color: white;
     border: 1px solid gainsboro;
     border-radius: 8px;
@@ -303,21 +303,6 @@ body > table:nth-of-type(2) tr:has(td:nth-child(2)) td {
     border-radius: 4px;
 }
 
-/* FAQ headings */
-h2::after {
-    transition: transform 0.3s ease;
-}
-
-body > table:first-of-type tr:nth-child(n+4) h2::after {
-    content: " +";
-    display: inline-block;
-    color: steelblue;
-}
-
-body > table:first-of-type tr:nth-child(n+4):hover h2::after {
-    transform: rotate(45deg);
-}
-
 /* Admin page table */
 body > table:nth-of-type(2):has(th) {
     display: block;
@@ -356,7 +341,7 @@ body > table:nth-of-type(2):has(th) tr:nth-child(even) td {
         font-size: 1.25rem;
     }
 
-    table:has(img[src="picture1.jpg"]):has(img[src="picture2.jpg"]) tr {
+    table:has(img[src="images/dental-check-up.jpg"]):has(img[src="images/teeth-cleaning.jpg"]) tr {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -408,7 +393,7 @@ body > table:nth-of-type(2):has(th) tr:nth-child(even) td {
         margin: 0 0.3rem;
     }
 
-    table:has(img[src="picture1.jpg"]):has(img[src="picture2.jpg"]) tr,
+    table:has(img[src="images/dental-check-up.jpg"]):has(img[src="images/teeth-cleaning.jpg"]) tr,
     body > table:nth-of-type(2) tr:has(td:nth-child(2)) {
         grid-template-columns: 1fr;
     }
@@ -444,3 +429,64 @@ body > table:nth-of-type(2):has(th) tr:nth-child(even) td {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Part 3: keep the Part 2 colours and add styles for the new controls. */
+[hidden] { display: none !important; }
+.brand-name { font-size: 2.3rem; font-weight: bold; color: darkslategray; margin: 0; }
+.content-section { max-width: 1150px; margin: 28px auto; padding: 24px; }
+.content-section h2 { margin-bottom: 12px; }
+a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; }
+.service-tools { background: aliceblue; border-radius: 8px; }
+.service-tools label { min-width: 0; margin: 12px 8px 8px 0; }
+.service-tools input, .service-tools select { margin-right: 14px; }
+.service-table { max-width: 1200px; margin: auto; }
+#service-grid, #service-grid tbody { display: block; }
+#service-grid tr { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; padding: 20px; }
+#service-grid td { text-align: center; border: 1px solid gainsboro; border-radius: 8px; box-shadow: 0 3px 10px gainsboro; }
+.service-table td img { width: 250px; height: 180px; object-fit: cover; }
+.faq-toggle { display: flex; justify-content: space-between; gap: 14px; text-align: left; width: 100%; }
+.faq-answer { padding: 12px 4px; }
+.gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.gallery-open { padding: 0; overflow: hidden; background: aliceblue; color: darkslategray; }
+.gallery-open img { display: block; width: 100%; height: 210px; object-fit: cover; }
+.gallery-open span { display: block; padding: 12px; }
+.gallery-open:hover, .gallery-open:focus { color: white; }
+dialog { border: 0; border-radius: 8px; padding: 18px; width: min(850px,95vw); max-height: 92vh; }
+dialog::backdrop { background: rgba(0,0,0,0.8); }
+#lightbox-image { display: block; margin: 14px auto; max-height: 60vh; max-width: 100%; width: auto; object-fit: contain; }
+.lightbox-controls { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+#clinic-map, #map-fallback { height: 380px; width: 100%; border: 1px solid silver; border-radius: 8px; margin: 16px 0; z-index: 0; }
+.map-controls { display: flex; gap: 8px; flex-wrap: wrap; }
+.field-error { display: block; color: firebrick; font-size: 0.95rem; margin: 4px 0; }
+.field-error:empty { display: none; }
+[aria-invalid="true"] { border-color: firebrick; }
+.form-help { font-size: 0.95rem; }
+.consent-row { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px; }
+.consent-row label { flex: 1; font-weight: normal; min-width: 160px; }
+.consent-row input[type="checkbox"] { width: 20px; height: 20px; flex-shrink: 0; margin-top: 4px; }
+.consent-row .field-error { flex-basis: 100%; }
+.form-result:not(:empty), .notice { padding: 18px; margin-top: 20px; background: aliceblue; border-left: 4px solid steelblue; overflow-wrap: anywhere; }
+.email-preview { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; }
+.action-link { display: inline-block; padding: 12px 16px; background: steelblue; color: white; border-radius: 4px; margin: 10px 12px 10px 0; }
+.action-link:hover, .action-link:focus { background: midnightblue; color: white; }
+button:disabled, input:disabled { opacity: 0.65; cursor: not-allowed; }
+button:disabled:hover { transform: none; }
+footer { padding: 25px; text-align: center; background: aliceblue; margin-top: 30px; }
+#back-to-top { position: fixed; bottom: 18px; right: 18px; z-index: 500; box-shadow: 0 3px 10px silver; }
+:focus-visible { outline: 3px solid midnightblue; outline-offset: 3px; }
+@media (max-width: 960px) {
+    #service-grid tr, .gallery { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 600px) {
+    .brand-name { font-size: 1.7rem; }
+    #service-grid tr, .gallery { grid-template-columns: 1fr; }
+    .content-section { margin: 15px 0; padding: 16px; }
+    .service-tools label { display: block; }
+    .service-tools input, .service-tools select { width: 100%; margin-bottom: 12px; }
+    #clinic-map, #map-fallback { height: 330px; }
+    .map-controls button { flex: 1 1 100%; }
+    .lightbox-controls { flex-wrap: wrap; }
+    .consent-row input[type="checkbox"] { width: 20px; }
+    #back-to-top { font-size: 0.8rem; padding: 8px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

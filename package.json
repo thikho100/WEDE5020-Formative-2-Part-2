@@ -1,0 +1,7 @@
+{
+  "name": "kulani-dentistry-part3",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {"start": "node server.cjs", "build": "node build.cjs"},
+  "engines": {"node": ">=22"}
+}

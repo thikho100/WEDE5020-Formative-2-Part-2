@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Deployment template. build.cjs substitutes the real website address. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.invalid/index.html</loc></url>
+  <url><loc>https://example.invalid/about.html</loc></url>
+  <url><loc>https://example.invalid/services.html</loc></url>
+  <url><loc>https://example.invalid/enquiry.html</loc></url>
+  <url><loc>https://example.invalid/faq.html</loc></url>
+  <url><loc>https://example.invalid/contact.html</loc></url>
+</urlset>
