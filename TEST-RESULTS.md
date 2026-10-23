@@ -21,7 +21,7 @@ DOM checks used jsdom in a separate test environment. It is not a project depend
 
 ## Not verified here
 
-Browser downloads were unavailable and the cloud browser blocked the local preview address. Therefore no visual desktop/mobile inspection, native dialog keyboard/focus check, live map rendering check or browser screenshots are claimed. Follow START-HERE.html to carry out those checks on the laptop.
+Browser downloads were unavailable and the cloud browser blocked the local preview address. Therefore no visual desktop/mobile inspection, native dialog keyboard/focus check, live map rendering check or browser screenshots are claimed. Use SUBMISSION-CHECKLIST.md to carry out the outstanding checks.
 
 The following also remain unverified: public Netlify deployment and function bundling, live response headers/HTTPS, real mailbox ownership and email delivery, exact clinic coordinates, GitHub push history and off-page promotion. No email or social message was sent.
 
@@ -43,3 +43,20 @@ The user has separately confirmed local service search/reset, gallery navigation
 - Earlier user checks confirmed search/reset, gallery, FAQ, map, forms and mobile/tablet layouts before this change.
 
 Map fallback: Node VM DOM-stub checks passed for direct files and missing Leaflet on HTTP, including all three location controls. Embedded map network rendering has not been visually verified here.
+
+## 23 October 2026 – Latest GitHub ZIP review
+
+- Syntax checks passed for script.js, enquiry-check.js and the function handler.
+- Eight HTML pages passed local link/asset, single-H1, description and keywords checks. Static images have alt text; the lightbox image receives its alt text in JavaScript.
+- Shared enquiry checks passed a valid request and rejected invalid email, phone, consent, Sunday, impossible/past date, Saturday afternoon and unknown service.
+- Direct handler tests passed success, wrong method (405), unsupported content type (415), malformed JSON (400) and oversized body (413). These were direct function calls, not live hosted AJAX tests.
+- Build succeeded with a reserved test domain; the generated test dist folder was removed before packaging.
+- No browser executable was available for fresh visual testing. The user previously confirmed local functionality, including the map.
+- No live deployment, mailbox delivery, social promotion or backlink evidence was verified.
+
+## 23 October 2026 – Responsive-image update
+
+- JavaScript syntax and deployment build passed after updating dynamic service image attributes.
+- All 16 static JPEG image elements have srcset/sizes. Every candidate exists and its measured width matches its descriptor (300w, 600w or 900w).
+- All image candidates are included in the deployment build. The seven 300px files are smaller than their originals.
+- CSS and original photos were preserved. Actual browser source selection and visual layout still need a browser check; no visual pass is claimed.

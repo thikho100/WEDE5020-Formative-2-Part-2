@@ -85,6 +85,6 @@ Use the references in README.md when learning the browser features and map libra
 
 ## Opening without Node.js
 
-Open index.html directly. enquiry-check.js holds the treatment details and validation rules. Both script.js and the optional server use these rules. With a direct file, the browser prepares the result itself. With HTTP hosting, it also tries AJAX and falls back to the browser result if the endpoint is unavailable. A result is an enquiry preview, not a sent message or confirmed booking. START-WEBSITE.cmd now only opens index.html.
+Open index.html directly. enquiry-check.js holds the treatment details and validation rules. Both script.js and the optional server use these rules. With a direct file, the browser prepares the result itself. With HTTP hosting, it also tries AJAX and falls back to the browser result if the endpoint is unavailable. A result is an enquiry preview, not a sent message or confirmed booking. No launcher file is required.
 
 Direct HTML viewing uses an OpenStreetMap embedded map with zoom/pan and the three location controls. The wider view covers both areas and has one selected-location pin. Hosted pages retain the two Leaflet markers and fall back to the embedded map if loading fails. Internet and permission to display embedded content are required.

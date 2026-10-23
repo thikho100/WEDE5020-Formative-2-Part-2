@@ -203,6 +203,11 @@ async function startServiceSearch() {
             card.dataset.service = service.id;
             const image = document.createElement('img');
             image.src = 'images/' + service.image;
+            // Smaller photo files let the browser choose an appropriate resolution.
+            const imageName = service.image.replace('.jpg', '');
+            image.srcset = 'images/' + imageName + '-300w.jpg 300w, ' +
+                'images/' + imageName + '-600w.jpg 600w, ' + image.src + ' 900w';
+            image.sizes = '(max-width: 600px) calc(100vw - 80px), 250px';
             image.alt = service.alt;
             image.width = 250;
             image.height = 180;

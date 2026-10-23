@@ -9,15 +9,15 @@ Student number: ST10526854
 
 This project continues the Part 2 dentistry website. The practice is based in Pretoria CBD and provides dental check-ups, cleaning, preventive care, fillings, extractions and emergency dental care. The blue and white design and external stylesheet from Part 2 are retained.
 
-Part 2 repository recorded in the supplied work: https://github.com/thikho100/WEDE5020-Formative-2-Part-2
+GitHub repository for Parts 2 and 3 (same repository, confirmed by the lecturer): https://github.com/thikho100/WEDE5020-Formative-2-Part-2
 
-Part 3 repository and published URL: **not supplied or published yet**. Add the correct lecturer-issued repository link and live website URL after deployment. A ZIP file alone is not the final submission required by the brief.
+Published website URL: **pending deployment**. Add the working HTTPS link after publishing. Submit the repository link through the LMS as required by the brief.
 
 ## Run the website
 
 1. Extract the whole ZIP folder.
 2. Double-click `index.html` in Edge or Chrome. No installation is needed.
-3. `START-WEBSITE.cmd` is an optional shortcut that opens the same HTML page.
+No launcher, browser extension or Node.js installation is required for local viewing.
 
 Search, gallery, FAQ and enquiry/contact validation work without Node.js. The enquiry uses the same checks in the browser and on the server and shows an email preview. Live map images require internet. Extensions that disable JavaScript must open the page in a normal browser tab.
 
@@ -50,9 +50,9 @@ Other files:
 - `server.cjs`: local server that uses the same enquiry handler.
 - `build.cjs`: creates a public `dist` folder, live canonical URLs, sitemap and robots file.
 - `netlify.toml` and `_headers`: deployment and response-header configuration.
-- `START-HERE.html`: opening, testing and submission instructions.
 - `PART2-README.md`: unchanged copy of the previous README.
-- `screenshots/`: supplied Part 2 evidence; `screenshots/part3/` contains any newly captured Part 3 evidence.
+- `screenshots/`: supplied Part 2 evidence. New Part 3 evidence is still to be added after live testing.
+- `SUBMISSION-CHECKLIST.md`: remaining checks and evidence required by the assignment.
 
 ## Part 3 functionality
 
@@ -106,7 +106,7 @@ The implementation follows relevant guidance in Google’s SEO Starter Guide [10
 
 These are chosen from the practice’s services and location. No search-volume study or ranking result is claimed. Each page has a unique title, description and relevant keywords meta tag. The keywords tag is included because it appears in the marking rubric; Google does not use that tag for ranking [10]. Content uses the phrases naturally, rather than repeating keywords excessively.
 
-There is one H1 per page, descriptive image filenames and alt text, internal links and readable page filenames. Image dimensions and lazy loading reduce layout movement and unnecessary downloads. The original images are small and are reused. Local scripts are deferred. CSS supports desktop, tablet and mobile widths.
+There is one H1 per page, descriptive image filenames and alt text, internal links and readable page filenames. Image dimensions and lazy loading reduce layout movement and unnecessary downloads. The original photographs are retained, with 300px and 600px variants provided through `srcset` and `sizes`. Static photos and dynamically generated service cards use these alternatives; the gallery lightbox uses the original 900px photographs. Local scripts are deferred. CSS supports desktop, tablet and mobile widths.
 
 The source sitemap uses `example.invalid` as an explicit placeholder. `build.cjs` creates the live sitemap, robots.txt and canonical links from the deployment URL. Staff pages use `noindex, nofollow` and are omitted from the sitemap. They are not blocked in robots.txt, so a crawler can read the noindex instruction.
 
@@ -129,7 +129,7 @@ The hosting header file sets a content security policy, clickjacking protection,
 
 This project is prepared for a Git-connected Netlify deployment [11]. Ordinary static hosting alone will not execute the enquiry POST endpoint.
 
-1. Use the correct Part 3 GitHub repository provided/approved by the lecturer. Keep the existing Part 2 history if instructed; do not overwrite or delete the old repository blindly.
+1. Continue using https://github.com/thikho100/WEDE5020-Formative-2-Part-2 for Part 3, as confirmed by the lecturer. Preserve its history.
 2. Commit the real changes with descriptive messages. Do not fabricate past commits or dates.
 3. Import that repository into Netlify. The included `netlify.toml` specifies the build command, `dist` publish folder and functions directory.
 4. Deploy, then confirm that all pages, map tiles and the AJAX POST work on the live HTTPS address.
@@ -138,9 +138,26 @@ This project is prepared for a Git-connected Netlify deployment [11]. Ordinary s
 
 Netlify supplies `URL` during a normal build. For a manual build, run `node build.cjs https://your-actual-site-address`. Do not deploy a test build containing `example.invalid`. Drag-and-dropping only the static files will not deploy the serverless function.
 
-Deployment has not been performed from this folder. Live account access, the target repository and a verified live address are still needed.
+Deployment has not been verified. The repository is confirmed; a working live address and live tests are still needed.
+
+## AI assistance disclosure
+
+OpenAI ChatGPT/Codex assisted with JavaScript implementation, validation, map fallbacks, deployment configuration, documentation and code review during this project [13]. The student must review the final work, explain the code, and include the AI disclosure annex and conversation screenshots required by the IIE instructions. This paragraph does not replace that annex.
 
 ## Changelog
+
+### 23 October 2026 – Responsive images and references
+
+- Added 300px/600px photo variants with srcset and sizes in HTML and dynamic service cards.
+- Retained original photos for the lightbox and preserved CSS layout rules.
+- Formatted CSS and image references as numbered online sources. Original access dates are retained where recorded; none were invented for older source credits.
+
+### 23 October 2026 – Assignment review
+
+- Confirmed the existing repository is used for Part 3.
+- Removed current opening instructions for absent launcher files.
+- Added an explicit submission checklist and AI assistance disclosure.
+- Rechecked source links, metadata, enquiry validation, endpoint responses and deployment build. Live browser and deployment checks remain outstanding.
 
 ### 7 October 2026 – Open without installation
 
@@ -202,25 +219,28 @@ See `TEST-RESULTS.md` for the checks actually performed and any limits. Live dep
 
 | Website file | Source |
 | --- | --- |
-| `images/dental-check-up.jpg` | Nadezhda Moryak / Pexels - *Dentist Showing a Dental Tool to Patient* - https://www.pexels.com/photo/dentist-showing-a-dental-tool-to-patient-7800560/ |
-| `images/teeth-cleaning.jpg` | Nadezhda Moryak / Pexels - *A Woman in White Coat Wearing Blue Face Mask* - https://www.pexels.com/photo/a-woman-in-white-coat-wearing-blue-face-mask-7803054/ |
-| `images/dental-treatment-room.jpg` | Pavel Danilyuk / Pexels - *Screen and Dental Instruments in Doctors Office* - https://www.pexels.com/photo/screen-and-dental-instruments-in-doctors-office-6809639/ |
-| `images/dental-patient-chair.jpg` | Nadezhda Moryak / Pexels - *A Woman Sitting on a Dental Chair* - https://www.pexels.com/photo/a-woman-sitting-on-a-dental-chair-7803058/ |
-| `images/dentist-at-work.jpg` | Arda Kaykısız / Pexels - *Redhead Dentist Working* - https://www.pexels.com/photo/redhead-dentist-working-19976581/ |
-| `images/dental-filling-treatment.jpg` | Andrea Piacquadio / Pexels - *Dentist Working on Woman's Teeth* - https://www.pexels.com/photo/dentist-working-working-on-woman-s-teeth-3779713/ |
-| `images/tooth-brushing-advice.jpg` | Polina Zimmerman / Pexels - *Crop Female Dentist Showing Right Way of Teeth Cleaning* - https://www.pexels.com/photo/crop-female-dentist-showing-right-way-of-teeth-cleaning-3958092/ |
-| `images/tooth-logo.png` | Rawpixel - black tooth silhouette PNG - https://www.rawpixel.com/image/12832085/png-black-white-logo-silhouette-generated-image-rawpixel |
+| `images/dental-check-up.jpg` | [14] |
+| `images/teeth-cleaning.jpg` | [15] |
+| `images/dental-treatment-room.jpg` | [16] |
+| `images/dental-patient-chair.jpg` | [17] |
+| `images/dentist-at-work.jpg` | [18] |
+| `images/dental-filling-treatment.jpg` | [19] |
+| `images/tooth-brushing-advice.jpg` | [20] |
+| `images/tooth-logo.png` | [21] |
 
-## CSS references
+## References
 
-[1] MDN Web Docs, "Using media queries." https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using  
-[2] MDN Web Docs, "Pseudo-classes." https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes  
-[3] MDN Web Docs, "transform." https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform  
-[4] MDN Web Docs, "Using CSS animations." https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations/Using  
-[5] Orlando Pirates Football Club, official website. https://www.orlandopiratesfc.com/
+The CSS layout uses media queries [1], interaction states [2], transforms [3] and animations [4]. The retained Part 2 design reference is the Orlando Pirates website [5].
 
+[1] MDN Web Docs, "Using media queries." [Online]. Available: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using.
 
-## Part 3 references
+[2] MDN Web Docs, "Pseudo-classes." [Online]. Available: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes.
+
+[3] MDN Web Docs, "transform." [Online]. Available: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform.
+
+[4] MDN Web Docs, "Using CSS animations." [Online]. Available: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations/Using.
+
+[5] Orlando Pirates Football Club, official website. [Online]. Available: https://www.orlandopiratesfc.com/.
 
 [6] MDN Web Docs, “Using the Fetch API.” [Online]. Available: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch. [Accessed: 5 Oct. 2026].
 
@@ -237,3 +257,21 @@ See `TEST-RESULTS.md` for the checks actually performed and any limits. Live dep
 [12] OpenStreetMap Foundation, “Tile Usage Policy.” [Online]. Available: https://operations.osmfoundation.org/policies/tiles/. [Accessed: 5 Oct. 2026].
 
 Direct HTML viewing uses an OpenStreetMap embedded map with zoom/pan and the three location controls. The wider view covers both areas and has one selected-location pin. Hosted pages retain the two Leaflet markers and fall back to the embedded map if loading fails. Internet and permission to display embedded content are required.
+
+[13] OpenAI, “ChatGPT,” AI assistance with website development and review, Oct. 2026. [Online]. Available: https://chatgpt.com/. [Accessed: 23 Oct. 2026].
+
+[14] Nadezhda Moryak / Pexels - *Dentist Showing a Dental Tool to Patient*. [Online]. Available: https://www.pexels.com/photo/dentist-showing-a-dental-tool-to-patient-7800560.
+
+[15] Nadezhda Moryak / Pexels - *A Woman in White Coat Wearing Blue Face Mask*. [Online]. Available: https://www.pexels.com/photo/a-woman-in-white-coat-wearing-blue-face-mask-7803054.
+
+[16] Pavel Danilyuk / Pexels - *Screen and Dental Instruments in Doctors Office*. [Online]. Available: https://www.pexels.com/photo/screen-and-dental-instruments-in-doctors-office-6809639.
+
+[17] Nadezhda Moryak / Pexels - *A Woman Sitting on a Dental Chair*. [Online]. Available: https://www.pexels.com/photo/a-woman-sitting-on-a-dental-chair-7803058.
+
+[18] Arda Kaykısız / Pexels - *Redhead Dentist Working*. [Online]. Available: https://www.pexels.com/photo/redhead-dentist-working-19976581.
+
+[19] Andrea Piacquadio / Pexels - *Dentist Working on Woman's Teeth*. [Online]. Available: https://www.pexels.com/photo/dentist-working-working-on-woman-s-teeth-3779713.
+
+[20] Polina Zimmerman / Pexels - *Crop Female Dentist Showing Right Way of Teeth Cleaning*. [Online]. Available: https://www.pexels.com/photo/crop-female-dentist-showing-right-way-of-teeth-cleaning-3958092.
+
+[21] Rawpixel - black tooth silhouette PNG. [Online]. Available: https://www.rawpixel.com/image/12832085/png-black-white-logo-silhouette-generated-image-rawpixel.
