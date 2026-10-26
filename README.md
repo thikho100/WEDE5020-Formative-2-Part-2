@@ -11,7 +11,9 @@ This project continues the Part 2 dentistry website. The practice is based in Pr
 
 GitHub repository for Parts 2 and 3 (same repository, confirmed by the lecturer): https://github.com/thikho100/WEDE5020-Formative-2-Part-2
 
-Published website URL: **pending deployment**. Add the working HTTPS link after publishing. Submit the repository link through the LMS as required by the brief.
+Live website: **https://kulanis-dentistry-thikho.netlify.app/**
+
+Open this link in a browser without installing software or logging in. Local viewing through `index.html` is still supported. Submit the GitHub repository link through the LMS as required by the brief.
 
 ## Run the website
 
@@ -138,13 +140,20 @@ This project is prepared for a Git-connected Netlify deployment [11]. Ordinary s
 
 Netlify supplies `URL` during a normal build. For a manual build, run `node build.cjs https://your-actual-site-address`. Do not deploy a test build containing `example.invalid`. Drag-and-dropping only the static files will not deploy the serverless function.
 
-Deployment has not been verified. The repository is confirmed; a working live address and live tests are still needed.
+Published on Netlify on 26 October 2026 from GitHub commit `999fd79`. All six public pages, script.js, robots.txt and sitemap.xml returned HTTP 200 without authentication. A direct HTTP POST to the deployed enquiry endpoint returned HTTP 200 with a treatment response. The student confirmed the live search/filter/sort/reset, gallery, FAQ, map, contact email preparation and enquiry response worked in their browser. Email delivery and a separate live mobile test are not claimed.
 
 ## AI assistance disclosure
 
 OpenAI ChatGPT/Codex assisted with JavaScript implementation, validation, map fallbacks, deployment configuration, documentation and code review during this project [13]. The student must review the final work, explain the code, and include the AI disclosure annex and conversation screenshots required by the IIE instructions. This paragraph does not replace that annex.
 
 ## Changelog
+
+### 26 October 2026 – Publishing and live checks
+
+- Published https://kulanis-dentistry-thikho.netlify.app/ from the existing GitHub repository.
+- Verified public page access, generated SEO files and a successful POST to the enquiry endpoint.
+- Student confirmed the live browser features worked.
+- Added the live link for the lecturer. Off-page SEO evidence, AI disclosure annex and separate live mobile testing remain outstanding.
 
 ### 23 October 2026 – Responsive images and references
 
@@ -212,7 +221,7 @@ OpenAI ChatGPT/Codex assisted with JavaScript implementation, validation, map fa
 
 ## Testing
 
-See `TEST-RESULTS.md` for the checks actually performed and any limits. Live deployment, mailbox delivery and off-page SEO remain separate checks.
+See `TEST-RESULTS.md` for the checks actually performed and any limits. Deployment and the student browser checks are recorded above. Mailbox delivery, separate live mobile testing, off-page SEO evidence and the AI disclosure annex remain outstanding.
 
 ## Image source credits
 
