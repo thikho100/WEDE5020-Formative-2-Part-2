@@ -1,35 +1,36 @@
 # Part 3 submission checklist
 
-Reviewed against the supplied WEDE5020 instructions (Part 3, pages 15–18) and Part 3 rubric on 23 October 2026.
+Updated: 26 October 2026. Based on the supplied WEDE5020 assignment and the checks recorded in TEST-RESULTS.md. This checklist is a tracking aid, not an additional assignment deliverable specified by the brief.
 
-## Present in source
+## Completed
 
-- FAQ accordion, gallery lightbox, animations/transitions and DOM updates.
-- Leaflet map with direct-file embedded-map fallback.
-- JSON catalogue, search, category filtering and sorting.
-- Enquiry validation and treatment-duration/opening-hours response.
-- AJAX enquiry POST endpoint. Local fallback is not proof that hosted AJAX works.
-- Contact validation and encoded email the user can send through their mail app, matching the detailed contact-form instructions.
-- Titles, descriptions, keywords, heading structure, image alt text, internal links, robots/sitemap and hosting security headers.
-- README changelog includes Part 2 feedback changes.
+- [x] Part 2 feedback changes and README changelog included.
+- [x] JavaScript interactions, gallery, FAQ, search/filter/sort and form validation implemented.
+- [x] Map and direct-file browser fallback implemented; student confirmed local functionality without Node.js or a launcher.
+- [x] Responsive image variants and on-page SEO included.
+- [x] Current code published from the same GitHub repository used for Part 2.
+- [x] Public Netlify website and live URL in README.
+- [x] Public pages and generated sitemap/robots checked over HTTPS.
+- [x] Deployed enquiry POST returned HTTP 200 with JSON.
+- [x] Student confirmed live website features worked in their browser.
+- [x] Existing Part 2 README and screenshots preserved.
 
-## Before submission
+## Remaining checks and submission
 
-- [ ] Publish the current repository. The assignment permits a free platform of choice; this implementation includes a Netlify function.
-- [ ] Add the actual live URL to README.
-- [ ] On the live site, confirm the enquiry POST returns HTTP 200 with JSON in browser Network tools. A browser fallback response alone is insufficient evidence of AJAX submission.
-- [ ] Test all pages, search/filter/sort/reset, FAQ, gallery keyboard controls, map controls and both forms on desktop and mobile.
-- [ ] Confirm the contact email opens with the correct recipient, subject and body; sending still requires the user's email app. Do not claim automatic delivery.
-- [ ] Check live sitemap, robots, canonical URLs, HTTPS and response headers.
-- [ ] Add current screenshots and an accurate test record. Existing screenshots are Part 2 evidence.
-- [ ] Complete and record genuine off-page SEO work (backlinks/social promotion) appropriate to this student project. Do not invent links or represent an unverified clinic account as official.
-- [x] Format the README references consistently as numbered IEEE-style online sources, including image sources and AI assistance. Older source access dates were not recorded; add the actual dates if available.
-- [ ] Complete the IIE AI disclosure annex with actual conversation screenshots and the student's review of how the assistance was used. README disclosure alone is insufficient.
-- [ ] Include the required assessment-sheet/student details in the submission and follow the cover-sheet/LMS instructions.
-- [ ] Commit actual changes with descriptive messages and submit the GitHub link to the LMS.
+- [ ] Check current desktop/tablet/mobile layouts and keyboard/focus behaviour. Reuse Part 2 screenshots where they accurately show the current site; replace outdated evidence.
+- [ ] Complete genuine off-page SEO activity and evidence. Deferred by the student; not completed.
+- [ ] Complete the IIE AI disclosure annex with actual conversation screenshots. Deferred by the student; README acknowledgement does not replace the annex.
+- [ ] Verify assessment cover-sheet/student details and the required LMS/Turnitin submission format.
+- [ ] Upload updated TEST-RESULTS.md and SUBMISSION-CHECKLIST.md to the repository root with a descriptive commit.
+- [ ] Submit the GitHub repository URL through the LMS and retain submission confirmation.
 
-## Carry-over items to review
+## Limits
 
-- The Part 2 responsive-image gap is fixed: HTML photos and dynamic service images now use srcset/sizes with 300px, 600px and original 900px sources. Browser layout checks are still required.
-- The map labels the clinic pin as an approximate CBD location. Exact coordinates have not been verified.
-- No live URL, social posts, backlinks, email delivery or AI annex completion is claimed by this review.
+- Contact email preparation is implemented; actual delivery/mailbox ownership is not verified.
+- The clinic map pin is approximate, not a verified street-level coordinate.
+- No new screenshots, social posts or backlinks are claimed.
+- The source sitemap placeholder is replaced during the Netlify build; the published sitemap has the live domain.
+
+Repository: https://github.com/thikho100/WEDE5020-Formative-2-Part-2
+
+Website: https://kulanis-dentistry-thikho.netlify.app/

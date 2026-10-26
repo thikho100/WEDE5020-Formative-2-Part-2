@@ -1,6 +1,8 @@
 # Part 3 test results
 
-Date: 5 October 2026
+Records: 5–26 October 2026
+
+Historical sections below describe checks at their recorded dates. The 26 October section updates the deployment status.
 
 ## Completed checks
 
@@ -19,7 +21,7 @@ Date: 5 October 2026
 
 DOM checks used jsdom in a separate test environment. It is not a project dependency and is not needed to run the website.
 
-## Not verified here
+## Limitations at the initial 5 October review
 
 Browser downloads were unavailable and the cloud browser blocked the local preview address. Therefore no visual desktop/mobile inspection, native dialog keyboard/focus check, live map rendering check or browser screenshots are claimed. Use SUBMISSION-CHECKLIST.md to carry out the outstanding checks.
 
@@ -60,3 +62,22 @@ Map fallback: Node VM DOM-stub checks passed for direct files and missing Leafle
 - All 16 static JPEG image elements have srcset/sizes. Every candidate exists and its measured width matches its descriptor (300w, 600w or 900w).
 - All image candidates are included in the deployment build. The seven 300px files are smaller than their originals.
 - CSS and original photos were preserved. Actual browser source selection and visual layout still need a browser check; no visual pass is claimed.
+
+## 26 October 2026 – Publishing and live checks
+
+- Published website: https://kulanis-dentistry-thikho.netlify.app/
+- Deployment from GitHub commit `999fd79`; the current package uses repository commit `a6538b0` plus updated testing/checklist documentation.
+- All six public pages, script.js, robots.txt and sitemap.xml returned HTTP 200 without authentication in the earlier live checks on this date.
+- Live robots.txt and sitemap.xml contained the published site domain.
+- A direct HTTP POST to the deployed enquiry function returned HTTP 200 and JSON with a relevant treatment response. No booking was reserved and no email was sent.
+- The student confirmed the live search/filter/sort/reset, gallery, FAQ, map, contact email preparation and enquiry response worked in their browser.
+- The student previously confirmed direct-file functionality, including the map, without the launcher or Node.js.
+- Separate live mobile/tablet and keyboard/focus testing, exact clinic coordinates and real email delivery are not claimed. Existing screenshots remain Part 2 evidence.
+- Off-page SEO activity/evidence and the required AI disclosure annex remain unfinished; the student chose to defer both.
+
+## 26 October 2026 – Local folder synchronisation
+
+- Rebuilt the package from the latest fetched GitHub main branch, commit `a6538b0`.
+- Included responsive image variants, current source files, live-link README, preserved PART2-README.md, original proposal documents and existing screenshots.
+- Updated this testing record and SUBMISSION-CHECKLIST.md. No new screenshots or external promotion were invented.
+- Obsolete START-HERE.html and START-WEBSITE.cmd from the older uploaded folder are omitted, matching GitHub. Open index.html directly for local viewing.
