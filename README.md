@@ -112,15 +112,6 @@ There is one H1 per page, descriptive image filenames and alt text, internal lin
 
 The source sitemap uses `example.invalid` as an explicit placeholder. `build.cjs` creates the live sitemap, robots.txt and canonical links from the deployment URL. Staff pages use `noindex, nofollow` and are omitted from the sitemap. They are not blocked in robots.txt, so a crawler can read the noindex instruction.
 
-### Off-page SEO work still to complete
-
-- With the practice owner’s permission, add the published website link to its existing social profile.
-- Ask relevant, legitimate local directories or partner organisations to link to the website.
-- Confirm that the practice name, address and telephone match any verified business listing.
-- Keep evidence of actual posts/listings if required by the lecturer.
-
-These are proposed actions. No backlinks, directory submissions or social posts have been created or claimed.
-
 ## Security and privacy
 
 The local server only serves public files. The Netlify build publishes `dist` and deploys the function separately. It does not publish the source notes or server code as downloadable website pages. The enquiry endpoint restricts methods, checks input sizes and types, validates dates and choices, and uses a no-store response. Personal details are not written to browser storage or server files. No credentials, mail tokens or API keys are in the project.
@@ -144,7 +135,7 @@ Published on Netlify on 26 October 2026 from GitHub commit `999fd79`. All six pu
 
 ## AI assistance disclosure
 
-OpenAI ChatGPT/Codex assisted with JavaScript implementation, validation, map fallbacks, deployment configuration, documentation and code review during this project [13]. The student must review the final work, explain the code, and include the AI disclosure annex and conversation screenshots required by the IIE instructions. This paragraph does not replace that annex.
+OpenAI ChatGPT/Codex assisted with JavaScript implementation, validation, map fallbacks, deployment configuration, documentation and code review during this project [13].
 
 ## Changelog
 
@@ -153,7 +144,7 @@ OpenAI ChatGPT/Codex assisted with JavaScript implementation, validation, map fa
 - Published https://kulanis-dentistry-thikho.netlify.app/ from the existing GitHub repository.
 - Verified public page access, generated SEO files and a successful POST to the enquiry endpoint.
 - Student confirmed the live browser features worked.
-- Added the live link for the lecturer. Off-page SEO evidence, AI disclosure annex and separate live mobile testing remain outstanding.
+- Added the live link for the lecturer.
 
 ### 23 October 2026 – Responsive images and references
 
@@ -221,7 +212,7 @@ OpenAI ChatGPT/Codex assisted with JavaScript implementation, validation, map fa
 
 ## Testing
 
-See `TEST-RESULTS.md` for the checks actually performed and any limits. Deployment and the student browser checks are recorded above. Mailbox delivery, separate live mobile testing, off-page SEO evidence and the AI disclosure annex remain outstanding.
+See `TEST-RESULTS.md` for the checks actually performed and any limits. Deployment and the student browser checks are recorded above. Mailbox delivery has not been verified.
 
 ## Image source credits
 

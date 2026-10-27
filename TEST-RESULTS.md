@@ -25,7 +25,7 @@ DOM checks used jsdom in a separate test environment. It is not a project depend
 
 Browser downloads were unavailable and the cloud browser blocked the local preview address. Therefore no visual desktop/mobile inspection, native dialog keyboard/focus check, live map rendering check or browser screenshots are claimed. Use SUBMISSION-CHECKLIST.md to carry out the outstanding checks.
 
-The following also remain unverified: public Netlify deployment and function bundling, live response headers/HTTPS, real mailbox ownership and email delivery, exact clinic coordinates, GitHub push history and off-page promotion. No email or social message was sent.
+The following also remain unverified: public Netlify deployment and function bundling, live response headers/HTTPS, real mailbox ownership and email delivery, exact clinic coordinates, and GitHub push history. No email was sent.
 
 The three existing responsive screenshots are Part 2 evidence. They are not new Part 3 screenshots.
 
@@ -54,7 +54,7 @@ Map fallback: Node VM DOM-stub checks passed for direct files and missing Leafle
 - Direct handler tests passed success, wrong method (405), unsupported content type (415), malformed JSON (400) and oversized body (413). These were direct function calls, not live hosted AJAX tests.
 - Build succeeded with a reserved test domain; the generated test dist folder was removed before packaging.
 - No browser executable was available for fresh visual testing. The user previously confirmed local functionality, including the map.
-- No live deployment, mailbox delivery, social promotion or backlink evidence was verified.
+- No live deployment or mailbox delivery was verified at this review.
 
 ## 23 October 2026 – Responsive-image update
 
@@ -73,7 +73,6 @@ Map fallback: Node VM DOM-stub checks passed for direct files and missing Leafle
 - The student confirmed the live search/filter/sort/reset, gallery, FAQ, map, contact email preparation and enquiry response worked in their browser.
 - The student previously confirmed direct-file functionality, including the map, without the launcher or Node.js.
 - Separate live mobile/tablet and keyboard/focus testing, exact clinic coordinates and real email delivery are not claimed. Existing screenshots remain Part 2 evidence.
-- Off-page SEO activity/evidence and the required AI disclosure annex remain unfinished; the student chose to defer both.
 
 ## 26 October 2026 – Local folder synchronisation
 

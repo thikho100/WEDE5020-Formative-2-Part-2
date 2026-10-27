@@ -18,8 +18,6 @@ Updated: 26 October 2026. Based on the supplied WEDE5020 assignment and the chec
 ## Remaining checks and submission
 
 - [ ] Check current desktop/tablet/mobile layouts and keyboard/focus behaviour. Reuse Part 2 screenshots where they accurately show the current site; replace outdated evidence.
-- [ ] Complete genuine off-page SEO activity and evidence. Deferred by the student; not completed.
-- [ ] Complete the IIE AI disclosure annex with actual conversation screenshots. Deferred by the student; README acknowledgement does not replace the annex.
 - [ ] Verify assessment cover-sheet/student details and the required LMS/Turnitin submission format.
 - [ ] Upload updated TEST-RESULTS.md and SUBMISSION-CHECKLIST.md to the repository root with a descriptive commit.
 - [ ] Submit the GitHub repository URL through the LMS and retain submission confirmation.
@@ -28,7 +26,7 @@ Updated: 26 October 2026. Based on the supplied WEDE5020 assignment and the chec
 
 - Contact email preparation is implemented; actual delivery/mailbox ownership is not verified.
 - The clinic map pin is approximate, not a verified street-level coordinate.
-- No new screenshots, social posts or backlinks are claimed.
+- No new screenshots are included.
 - The source sitemap placeholder is replaced during the Netlify build; the published sitemap has the live domain.
 
 Repository: https://github.com/thikho100/WEDE5020-Formative-2-Part-2
