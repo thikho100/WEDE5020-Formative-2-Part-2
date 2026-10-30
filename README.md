@@ -93,6 +93,18 @@ The contact form collects a name, email address, message type, message and conse
 
 The original staff login submitted a password using GET, which would put it in the URL. The unsafe form is removed. Staff sign-in requires a real authentication service. The original admin layout remains as a clearly labelled preview with disabled sample actions. Client-side code and robots.txt are not access controls.
 
+## SEO discussion
+
+1. **Meaning and purpose:** Search engine optimisation (SEO) helps search engines understand a website and helps people find relevant pages. For Kulani’s Dentistry, it means making the services and Pretoria location clear to someone searching for dental care [10].
+
+2. **User experience and performance:** Clear headings and links help visitors find information. Responsive layouts make pages easier to use on phones. This site also offers smaller image versions, reducing download size when the browser selects them [1], [10].
+
+3. **Benefits:** SEO can attract visitors from unpaid search results and help them decide whether the website meets their needs. For this project, that could mean more people discovering the services and enquiry page. Higher rankings or enquiries are not guaranteed [10].
+
+4. **Techniques used:** HTML provides descriptive titles, image alt text and service content that remains available without JavaScript. In `style.css`, `@media (max-width: 600px)` adjusts the mobile layout. `<script src="script.js" defer></script>` lets HTML parsing continue while JavaScript downloads, supporting page loading [1], [10], [23].
+
+5. **Meta elements:** These supply information about a page. The home page’s description summarises its dental services and may appear in search snippets. `<meta charset="utf-8">` sets the character encoding; `<meta name="viewport" content="width=device-width, initial-scale=1.0">` supports mobile sizing. Staff pages use `<meta name="robots" content="noindex, nofollow">` to request exclusion from search results [10], [22].
+
 ## Search engine optimisation
 
 The implementation follows relevant guidance in Google’s SEO Starter Guide [10].
@@ -138,6 +150,11 @@ Published on Netlify on 26 October 2026 from GitHub commit `999fd79`. All six pu
 OpenAI ChatGPT/Codex assisted with JavaScript implementation, validation, map fallbacks, deployment configuration, documentation and code review during this project [13].
 
 ## Changelog
+
+### 29 October 2026 – SEO discussion
+
+- Added five brief answers covering SEO purpose, user experience, performance, benefits, implementation and HTML meta elements, following the lecturer’s announcement.
+- Included examples from the existing website and numbered source citations.
 
 ### 26 October 2026 – Publishing and live checks
 
@@ -250,7 +267,7 @@ The CSS layout uses media queries [1], interaction states [2], transforms [3] an
 
 [9] Leaflet, “Quick Start Guide.” [Online]. Available: https://leafletjs.com/examples/quick-start/. [Accessed: 5 Oct. 2026].
 
-[10] Google Search Central, “Search Engine Optimization (SEO) Starter Guide.” [Online]. Available: https://developers.google.com/search/docs/fundamentals/seo-starter-guide. [Accessed: 5 Oct. 2026].
+[10] Google Search Central, “Search Engine Optimization (SEO) Starter Guide.” [Online]. Available: https://developers.google.com/search/docs/fundamentals/seo-starter-guide. [Accessed: 29 Oct. 2026].
 
 [11] Netlify, “Get started with functions.” [Online]. Available: https://docs.netlify.com/build/functions/get-started/. [Accessed: 5 Oct. 2026].
 
@@ -275,3 +292,7 @@ Direct HTML viewing uses an OpenStreetMap embedded map with zoom/pan and the thr
 [20] Polina Zimmerman / Pexels - *Crop Female Dentist Showing Right Way of Teeth Cleaning*. [Online]. Available: https://www.pexels.com/photo/crop-female-dentist-showing-right-way-of-teeth-cleaning-3958092.
 
 [21] Rawpixel - black tooth silhouette PNG. [Online]. Available: https://www.rawpixel.com/image/12832085/png-black-white-logo-silhouette-generated-image-rawpixel.
+
+[22] MDN Web Docs, “<meta>: The metadata element.” [Online]. Available: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta. [Accessed: 29 Oct. 2026].
+
+[23] MDN Web Docs, “<script>: The script element.” [Online]. Available: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script. [Accessed: 29 Oct. 2026].
