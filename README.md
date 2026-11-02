@@ -122,7 +122,7 @@ These are chosen from the practice’s services and location. No search-volume s
 
 There is one H1 per page, descriptive image filenames and alt text, internal links and readable page filenames. Image dimensions and lazy loading reduce layout movement and unnecessary downloads. The original photographs are retained, with 300px and 600px variants provided through `srcset` and `sizes`. Static photos and dynamically generated service cards use these alternatives; the gallery lightbox uses the original 900px photographs. Local scripts are deferred. CSS supports desktop, tablet and mobile widths.
 
-The source sitemap uses `example.invalid` as an explicit placeholder. `build.cjs` creates the live sitemap, robots.txt and canonical links from the deployment URL. Staff pages use `noindex, nofollow` and are omitted from the sitemap. They are not blocked in robots.txt, so a crawler can read the noindex instruction.
+The included sitemap.xml and robots.txt use the published address, https://kulanis-dentistry-thikho.netlify.app. They can be inspected directly without running a build. `build.cjs` also generates these files and canonical links from the deployment URL when publishing. Staff pages use `noindex, nofollow` and are omitted from the sitemap. They are not blocked in robots.txt, so a crawler can read the noindex instruction.
 
 ## Security and privacy
 
@@ -141,15 +141,20 @@ This project is prepared for a Git-connected Netlify deployment [11]. Ordinary s
 5. Check the published `sitemap.xml`, `robots.txt` and canonical URLs. If the site name changes, deploy again so the build regenerates them.
 6. Add the actual repository and live URL at the top of this README. Capture live evidence and submit the required links.
 
-Netlify supplies `URL` during a normal build. For a manual build, run `node build.cjs https://your-actual-site-address`. Do not deploy a test build containing `example.invalid`. Drag-and-dropping only the static files will not deploy the serverless function.
+Netlify supplies `URL` during a normal build. For a manual build, run `node build.cjs https://kulanis-dentistry-thikho.netlify.app`. Drag-and-dropping only the static files will not deploy the serverless function.
 
-Published on Netlify on 26 October 2026 from GitHub commit `999fd79`. All six public pages, script.js, robots.txt and sitemap.xml returned HTTP 200 without authentication. A direct HTTP POST to the deployed enquiry endpoint returned HTTP 200 with a treatment response. The student confirmed the live search/filter/sort/reset, gallery, FAQ, map, contact email preparation and enquiry response worked in their browser. Email delivery and a separate live mobile test are not claimed.
+Published on Netlify on 26 October 2026 from GitHub commit `999fd79`. All six public pages, script.js, robots.txt and sitemap.xml returned HTTP 200 without authentication. A direct HTTP POST to the deployed enquiry endpoint returned HTTP 200 with a treatment response. The student confirmed the live search/filter/sort/reset, gallery, FAQ, map, contact email preparation and enquiry response worked in their browser. The student subsequently confirmed that mobile and tablet views work. Email delivery has not been verified.
 
 ## AI assistance disclosure
 
 OpenAI ChatGPT/Codex assisted with JavaScript implementation, validation, map fallbacks, deployment configuration, documentation and code review during this project [13].
 
 ## Changelog
+
+### 2 November 2026 – Source sitemap correction
+
+- Replaced the local sitemap and robots.txt placeholder addresses with the published website address.
+- Updated the documentation to describe the included files accurately and recorded the student’s mobile/tablet confirmation.
 
 ### 29 October 2026 – SEO discussion
 

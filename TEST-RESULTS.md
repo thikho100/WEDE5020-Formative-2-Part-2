@@ -80,3 +80,14 @@ Map fallback: Node VM DOM-stub checks passed for direct files and missing Leafle
 - Included responsive image variants, current source files, live-link README, preserved PART2-README.md, original proposal documents and existing screenshots.
 - Updated this testing record and SUBMISSION-CHECKLIST.md. No new screenshots or external promotion were invented.
 - Obsolete START-HERE.html and START-WEBSITE.cmd from the older uploaded folder are omitted, matching GitHub. Open index.html directly for local viewing.
+
+## 2 November 2026 – Source sitemap correction and package checks
+
+- Replaced source sitemap.xml and robots.txt placeholder addresses with https://kulanis-dentistry-thikho.netlify.app. No website HTML, CSS or JavaScript was changed.
+- All project JavaScript syntax checks passed. The deployment build succeeded with the published domain.
+- Checked all eight source pages and eight built pages for local href/src/srcset targets, script references, image alt attributes and one H1 each; no missing file targets were found.
+- Parsed source and built sitemap XML: both contain exactly the six public pages with the correct live domain. Both robots files point to the live sitemap. Generated canonical links match each public page.
+- Direct enquiry-handler checks passed: valid enquiry (200), invalid email (400), wrong method (405), unsupported content type (415), malformed JSON (400), oversized body (413).
+- Live checks returned HTTP 200 for all six public pages, sitemap.xml and robots.txt. The live sitemap and robots address matched the published domain.
+- The student previously confirmed mobile and tablet views work. No new browser visual/keyboard tests or screenshots were performed in this correction.
+- Replacement ZIP integrity and byte comparison against GitHub were checked. All original 73 files are retained; only sitemap.xml, robots.txt, README.md, SUBMISSION-CHECKLIST.md and this record changed. Build output is excluded from the ZIP.
